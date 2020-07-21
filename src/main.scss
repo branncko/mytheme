@@ -1,1 +1,17 @@
+$lc-dark: #2a3342;
+$lc-gray: #d8d8d8;
+$lc-orange: #e4a014;
+$lc-orange-light: #f2bf26;
+$lc-abacate: #00ff80;
+
+$theme-colors: (
+    "lc-dark": $lc-dark, 
+    "lc-gray": $lc-gray,
+    "lc-orange": $lc-orange,
+    "lc-orange-light": $lc-orange-light,
+    "lc-abacate": $lc-abacate
+);
+
+$link-color: $lc-orange-light;
+
 @import"../node_modules/bootstrap/scss/bootstrap"; 
