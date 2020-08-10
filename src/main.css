@@ -1,3 +1,8 @@
+.bg-banner-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -165,7 +170,7 @@ a {
 }
 
 a:hover {
-  color: #c0930c;
+  color: darker #f2bf26, 15%;
   text-decoration: underline;
 }
 
@@ -3853,7 +3858,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:hover {
-  color: #c0930c;
+  color: darker #f2bf26, 15%;
   text-decoration: underline;
 }
 
@@ -5856,7 +5861,7 @@ input[type="button"].btn-block {
 
 .page-link:hover {
   z-index: 2;
-  color: #c0930c;
+  color: darker #f2bf26, 15%;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
