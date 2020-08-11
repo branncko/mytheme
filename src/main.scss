@@ -1,18 +1,20 @@
 $lc-dark: #2a3342;
 $lc-gray: #d3d0d0;
+$lc-orange-dark: #ca7506;
 $lc-orange: #e4a014;
 $lc-orange-light: #f2bf26;
 $lc-abacate: #00ff80;
 
-$theme-colors: (
+$theme-colors: ( 
     "lc-dark": $lc-dark, 
     "lc-gray": $lc-gray,
     "lc-orange": $lc-orange,
     "lc-orange-light": $lc-orange-light,
+    "lc-orange-dark" : $lc-orange-dark,
     "lc-abacate": $lc-abacate
 );
 
-$link-color: $lc-orange-light;
+$link-color: $lc-orange-dark;
 $link-hover-color: darken ($link-color, 15%);
 $enable-rounded: false;
 
@@ -21,7 +23,7 @@ $enable-rounded: false;
      background-image: 
         linear-gradient(
            rgba(0,0,0,0),
-           rgba(0,0,0, 0.6)
+           rgba(0,0,0, 0.8)
         ) ;
 }
 
