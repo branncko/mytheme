@@ -23,8 +23,16 @@ $enable-rounded: false;
      background-image: 
         linear-gradient(
            rgba(0,0,0,0),
-           rgba(0,0,0, 0.8)
+           rgba(0,0,0, 0.85)
         ) ;
+}
+
+.border-card-footer {
+   border-left: solid 4px $lc-orange-light !important;
+   border-top: none !important;
+   border-bottom: none !important;
+   border-right: none !important;
+
 }
 
 @import"../node_modules/bootstrap/scss/bootstrap"; 
