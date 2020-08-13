@@ -32,7 +32,10 @@ $enable-rounded: false;
    border-top: none !important;
    border-bottom: none !important;
    border-right: none !important;
-
+}
+.banner-header {
+   min-height: 350px;
+   object-fit: cover;
 }
 
 @import"../node_modules/bootstrap/scss/bootstrap"; 
