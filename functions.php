@@ -2,8 +2,15 @@
 // Funções Iniciais
 function lc_theme_support(){
 
+    //Titulo de Site
     add_theme_support('title-tag');
+    
+    //Logotipo personalizado
     add_theme_support('custom-logo');
+
+    //Suporte para nav bar walker
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+    
 }
 add_action('after_setup_theme' , 'lc_theme_support'); 
 
@@ -14,3 +21,8 @@ if (!function_exists('wp_render_title_tag'))    {
     }
     add_action('wp_head', 'lc_render_title');
 }
+
+register_nav_menus(array(
+    'topo'      => __('Menu no topo', 'mytheme'),
+    'rodape'    => __('Menu no rodapé', 'mytheme')
+));
