@@ -26,3 +26,6 @@ register_nav_menus(array(
     'topo'      => __('Menu no topo', 'mytheme'),
     'rodape'    => __('Menu no rodapé', 'mytheme')
 ));
+
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(1280, 720, true);
