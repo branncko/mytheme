@@ -2,24 +2,24 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-  <!-- Required meta tags -->
-  <meta <?php bloginfo('charset'); ?>>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta <?php bloginfo('charset'); ?>>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link href="<?php bloginfo('template_url'); ?>/css/main.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="<?php bloginfo('template_url'); ?>/css/main.css" rel="stylesheet">
 
-  <!-- FontAwesome -->
-  <link href="<?php bloginfo('template_url'); ?>/css/all.css" rel="stylesheet">
- <?php wp_head();?>
+    <!-- FontAwesome -->
+    <link href="<?php bloginfo('template_url'); ?>/css/all.css" rel="stylesheet">
+    <?php wp_head();?>
 </head>
 
 <body>
-  <div class="bg-lc-dark">
-    <div class="container">
-      <div class="row py-4 align-items-center justify-content-center text-white">
-        <div class="col-8 col-md-4 col-lg-3 mb-4 mb-md-0">
-              <?php 
+    <div class="bg-lc-dark">
+        <div class="container">
+            <div class="row py-4 align-items-center justify-content-center text-white">
+                <div class="col-8 col-md-4 col-lg-3 mb-4 mb-md-0">
+                    <?php 
 
                 $lc_custom_logo = get_theme_mod('custom_logo');
                 $logo = wp_get_attachment_image_src($lc_custom_logo , 'full');
@@ -34,49 +34,50 @@
               
                 
               ?>
-         
+
+                </div>
+                <div class="col-12 col-md-8 col-lg-9 text-center text-md-right text-white lead">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3">
+                            <i class="fas fa-phone"></i>
+                            (88) 9 9956-7891
+                        </li>
+
+                        <li class="list-inline-item mr-3 mr-md-0 mr-lg-3'">
+                            <i class="fab fa-whatsapp "></i>
+                            (88) 9 9956-7891
+                        </li>
+
+                        <li class="list-inline-item mr-3">
+                            <i class="fas fa-inbox"></i>
+                            contato@brancosousa.com.br
+                        </li>
+
+                        <li class="list-inline-item -me-3">
+                            <i class="fab fa-facebook-square"></i>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <i class="fab fa-instagram"></i>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <div class="col-12 col-md-8 col-lg-9 text-center text-md-right text-white lead">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-3">
-              <i class="fas fa-phone"></i>
-              (88) 9 9956-7891
-            </li>
-
-            <li class="list-inline-item mr-3 mr-md-0 mr-lg-3'">
-              <i class="fab fa-whatsapp "></i>
-              (88) 9 9956-7891
-            </li>
-
-            <li class="list-inline-item mr-3">
-              <i class="fas fa-inbox"></i>
-              contato@brancosousa.com.br
-            </li>
-
-            <li class="list-inline-item -me-3">
-              <i class="fab fa-facebook-square"></i>
-            </li>
-
-            <li class="list-inline-item">
-              <i class="fab fa-instagram"></i>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-
     </div>
-  </div>
-  </div>
+    </div>
 
-  <nav class="navbar navbar-expand-md navbar-light bg-lc-gray" role="navigation">
-  <div class="container">
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir Menu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-   
-        <?php
+    <nav class="navbar navbar-expand-md navbar-light bg-lc-gray" role="navigation">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <?php
         wp_nav_menu( array(
             'theme_location'    => 'topo',
             'depth'             => 2,
@@ -89,5 +90,5 @@
         ) );
         ?>
 
-    </div>
-</nav>
+        </div>
+    </nav>
