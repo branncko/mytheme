@@ -90,6 +90,11 @@
             <p class="lead">Nenhuma publicação encontrada!</p>
 
             <?php endif; ?>
+
+            <div class="mt-3 mb-4">
+                <?php next_posts_link('Mais antigos'); ?>
+                <?php previous_posts_link('Mais novos'); ?>
+            </div>
         
         </div>
         <!-- Sidebar 2 -->
