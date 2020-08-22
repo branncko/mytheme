@@ -28,4 +28,7 @@ register_nav_menus(array(
 ));
 
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 1280, 720, true);
+set_post_thumbnail_size( 1280, 720, true); 
+add_filter( 'excerpt_length', function($length) {
+    return 15;
+}); 

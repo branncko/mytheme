@@ -1,20 +1,15 @@
 <?php if(is_single()) : ?>
-<div class="row mt-4">
-    <div class="col-md-6 col-sm-12">
-        <img src="./assets/image-1920x1080.jpg" class="img-fluid" alt="Imagem 01">
-    </div>
-    <div class="col-md-6 col-sm-12 mt-3 mt-md-0">
-        <p>
-            <span class="badge badge-lc-gray">Seu Dinheiro</span>
-        </p>
-        <h5>
-            <a href="#">A culpa é do STF. Bolsonaro tem razão</a>
-        </h5>
-        <p class="mb-0">As melhores taxas e condições para voce que deseja realizar todos os seus sonhos na
-            melhor
-            fase da vida.</p>
-        <p class="text-muted mt-3"><i class="far fa-clock"></i><small>Publicado em 11 de agosto de
-                2020</small></p>
+
+<div class="row">
+    <div class="col-8 mb-5">
+        <h1 class="mt-3 mb-2"><?php the_title();?></h1>
+        <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid') ); ?>
+        <p class="text-muted mt-3"><i class="far fa-clock"></i><small> Publicado em
+                <?php echo get_the_date(); ?></small> <i class="fa fa-user" aria-hidden="true"></i><small> Escrito por
+                <?php echo get_the_author(); ?></small></p>
+        <?php the_content(); ?>
+
+
     </div>
 </div>
 
@@ -32,9 +27,11 @@
             </span>
         </p>
         <h5>
-        <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
         </h5>
         <?php the_excerpt(); ?>
+        <p class="text-muted mt-3"><i class="far fa-clock"></i><small> Publicado em
+                <?php echo get_the_date(); ?></small></p>
     </div>
 </div>
 <?php endif; ?>
