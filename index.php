@@ -98,58 +98,7 @@
         
         </div>
         <!-- Sidebar 2 -->
-        <div class="col-lg-4 d-none d-lg-block">
-            <div class="card bg-lc-gray border-0 mb-4">
-                <div class="card-body">
-                    <h5>Pesquisar</h5>
-                    <form>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Crédito Pessoal"
-                                aria-label="Crédito Pessoal 2" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-lc-orange" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-            <div class="card text-white mb-4">
-                <img src="./assets/image-1920x1080.jpg" class="card-img" alt="Descrição da Imagem">
-                <div class="card-img-overlay bg-banner-header p-0 m-0 row">
-                    <div class="col align-self-end">
-                        <h5 class="mb-0">Empréstimo Pessoal</h5>
-                        <p>A solução para quem pensa no futuro</p>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="card text-white mb-4">
-                <img src="./assets/image-1920x1080.jpg" class="card-img" alt="Descrição da Imagem">
-                <div class="card-img-overlay bg-banner-header p-0 m-0 row">
-                    <div class="col align-self-end">
-                        <h5 class="mb-0">Empréstimo Consignado</h5>
-                        <p>A solução para quem pensa no futuro</p>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="card bg-lc-gray text-center border-0">
-                <div class="card-body">
-                    <ul class="list-unstyled list-inline mb-0">
-                        <li class="list-inline-item"><i class="fab fa-whatsapp fa-2x"></i></li>
-                        <li class="list-inline-item"><i class="fas fa-inbox fa-2x"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-facebook-square fa-2x"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-instagram fa-2x"></i></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
+        <?php get_sidebar();?>
     </div>
 </div>
 <!-- caixas de Comentários  -->
