@@ -2,6 +2,9 @@
     <?php 
     dynamic_sidebar( 'Busca' );
     ?>
+    <?php 
+    dynamic_sidebar( 'Cards' );
+    ?>
 
     <div class="card text-white mb-4">
         <img src="./assets/image-1920x1080.jpg" class="card-img" alt="Descrição da Imagem">

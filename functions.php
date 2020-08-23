@@ -52,3 +52,14 @@ register_sidebar(
         'after_title'   => '</h5>',
 
 ));
+
+register_sidebar( 
+    array(
+        'name'          => 'Cards',
+        'id'            => 'cards',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+
+));
