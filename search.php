@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col">
+    <div class="row my-5">
+        <div class="col-lg-8 col-12">
 
 
             <?php 
         if ( is_search() ) :
         $total_results = $wp_query->found_posts;
-            echo '<p class="lead mt-5 text-center">' . sprintf(__('Sua busca obteve %s resultado(s)', 'MyTheme'), $total_results, get_search_query() ) . '</p>';
+            echo '<p class="lead text-center">' . sprintf(__('Sua busca obteve %s resultado(s)', 'MyTheme'), $total_results, get_search_query() ) . '</p>';
         endif; 
     ?>
 
@@ -24,8 +24,7 @@
                 echo 
                 '<div class="row justify-content-center">
                 <div class="col-12 col-sm-8 col-md-6">
-        <p class="text-center">Nada foi encontrado. Tente novamente com algo diferente  .</p>';
-        get_search_form();
+        <p class="text-center">Nada foi encontrado. Tente novamente com algo diferente.</p>';
                 echo '</div></div>';
     
         endif; 
@@ -36,6 +35,7 @@
             </div>
 
         </div>
+        <?php get_sidebar();?>
     </div>
 </div>
 
