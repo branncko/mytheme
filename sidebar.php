@@ -6,7 +6,7 @@
     dynamic_sidebar( 'Cards' );
     ?>
 
-    <div class="card text-white mb-4">
+    <!-- <div class="card text-white mb-4">
         <img src="./assets/image-1920x1080.jpg" class="card-img" alt="Descrição da Imagem">
         <div class="card-img-overlay bg-banner-header p-0 m-0 row">
             <div class="col align-self-end">
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
     <div class="card bg-lc-gray text-center border-0">
         <div class="card-body">
             <ul class="list-unstyled list-inline mb-0">
