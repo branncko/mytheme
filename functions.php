@@ -63,3 +63,30 @@ register_sidebar(
         'after_title'   => '',
 
 ));
+
+function lc_cpt() {
+    // Informar os textos da interface
+    $labels = array (
+        'name'                  => _x('Depoimentos' , 'Depoimentos dos clientes', 'mytheme'),
+        'singular_name'         => _x('Depoimento', 'Depoimento do cliente', 'nytheme'),
+        'menu_name'             => __('Depoimentos', 'mytheme'),
+        'all_items'             => __('Todos os depoimentos', 'mytheme'),
+        'view_item'             => __('Ver depoimento', 'mytheme'),
+        'add_new_item'          => __('Adicionar novo depoimento', 'mytheme'),
+        'add_new'               => __('Adicionar novo','mytheme'),
+        'edit_item'             => __('Editar depoimento', 'mytheme'),
+        'update_item'           => __('Atualizar depoimento', 'mytheme'),
+        'search_items'          => __('Buscar depoimento', 'mytheme'),
+        'not_found'             => __('Não encontrado', 'mytheme'),
+        'not_found_in_trash'    => __('Não encontrado no lixo', 'mytheme'),
+    );
+
+    $args = array (
+        'label'         => __('depoimentos','mytheme'),
+        'description'   => __('Depoimentos dos clientes','mytheme'),
+        'labels'        => $labels,
+        'supports'      => array('title', 'editor',''),
+
+    );
+
+}
