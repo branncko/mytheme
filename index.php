@@ -81,9 +81,9 @@
 
             <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
 
-              <?php get_template_part('content', get_post_format());?>      
+            <?php get_template_part('content', get_post_format());?>
 
-                <?php endwhile; ?>
+            <?php endwhile; ?>
 
             <?php else : ?>
 
@@ -95,7 +95,7 @@
                 <?php next_posts_link('Mais antigos'); ?>
                 <?php previous_posts_link('Mais novos'); ?>
             </div>
-        
+
         </div>
         <!-- Sidebar 2 -->
         <?php get_sidebar();?>
@@ -105,38 +105,37 @@
 <div class="bg-lc-gray py-4 mt-4 mb-md-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12 mb-4">
+
+            <?php 
+
+                    $args = array('post_type' => 'depoimentos', 
+                    'posts_per_page' => 2
+                    );
+                    $the_query = new WP_Query( $args );
+                ?>
+
+            <?php if( $the_query -> have_posts() ) : 
+                while ( $the_query-> have_posts() ) : 
+                $the_query->have_posts(); ?>
+
+            <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
                 <div class="card border-card-footer">
                     <div class="card-body">
-                        <p> <em>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat porro laudantium
-                                cumque, harum
-                                ratione, aliquid natus consequuntur doloremque error consectetur, dolorem totam amet
-                                illum quae odit!
-                                Enim vitae vero animi.</em> </p>
-                        <p class="mb-0">
-                            <strong>
-                                <i class="fas fa-user"></i> João da Silva
-                            </strong>
-                        </p>
+                       <?php the_content(); ?> 
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="card border-card-footer">
-                    <div class="card-body">
-                        <p><em> Lorem ipsum dolor sit amet, consectetur elit. Nam, provident? Saepe quaerat eos
-                                distinctio in
-                                odio? Porro deserunt maxime molestiae! Minima amet mollitia praesentium ratione
-                                inventore doloribus
-                                iusto ducimus sequi.</em></p>
-                        <p class="mb-0">
-                            <strong>
-                                <i class="fas fa-user"></i> Zé Raimundo
-                            </strong>
-                        </p>
-                    </div>
-                </div>
+            <?php endwhile; ?>
+            <?php else : ?>
+            <div class="col-12">
+                <p class="lead">
+                    Nenhum Depoimento
+                </p>
             </div>
+            <?php endif; ?>
+
+
+            
         </div>
     </div>
 </div>
