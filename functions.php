@@ -82,11 +82,27 @@ function lc_cpt() {
     );
 
     $args = array (
-        'label'         => __('depoimentos','mytheme'),
-        'description'   => __('Depoimentos dos clientes','mytheme'),
-        'labels'        => $labels,
-        'supports'      => array('title', 'editor',''),
+        'label'               => __('depoimentos','mytheme'),
+        'description'         => __('Depoimentos dos clientes','mytheme'),
+        'labels'              => $labels,
+        'supports'            => array('title', 'editor'),
+        'hierachical'         => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-format-aside',
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => true,
+        'publicy_queryable'   => true,
+        'capability_type'     => 'post'  
 
     );
 
-}
+    register_post_type('depoimentos', $args);
+} 
+
+add_action('init', 'lc_cpt', 0);
