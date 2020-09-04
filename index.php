@@ -45,32 +45,40 @@
         <div class="col-xl-4 col-12 mt-3 mt-xl-0">
             <div class="card">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item border-0">
-                        <h5>
-                            <a href="#">Empréstimo Consignado</a>
-                        </h5>
-                        <p class="mb-0">As melhores taxas e condições para voce que deseja realizar todos os seus sonhos
-                            na melhor
-                            fase da vida.</p>
-                    </li>
 
-                    <li class="list-group-item border-0">
-                        <h5>
-                            <a href="#">Empréstimo Consignado</a>
-                        </h5>
-                        <p class="mb-0">As melhores taxas e condições para voce que deseja realizar todos os seus sonhos
-                            na melhor
-                            fase da vida.</p>
-                    </li>
+                    <?php 
 
-                    <li class="list-group-item border-0">
-                        <h5>
-                            <a href="#">Empréstimo Consignado</a>
-                        </h5>
-                        <p class="mb-0">As melhores taxas e condições para voce que deseja realizar todos os seus sonhos
-                            na melhor
-                            fase da vida.</p>
-                    </li>
+                        $page_args = array(
+                        'post_type' => 'page', 
+                        'post_parent' => '710',
+                        'posts_per_page' => '4'
+
+                        );
+                        $page_query = new WP_Query( $page_args );  ?>
+
+                    <?php if( $page_query -> have_posts() ) : 
+                        while ( $page_query -> have_posts() ) : 
+                        $page_query->the_post(); ?>
+
+                            <li class="list-group-item border-0">
+                                <h5>
+                                    <a href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?></a>
+                                </h5>
+                                <p class="mb-0"><?php the_excerpt(); ?> </p>
+                            </li>
+
+                    <?php endwhile; ?>
+                    <?php else : ?>
+                                <li class="list-group-item border-0">
+                                        <h5>
+                                            Nenhuma solição cadastrada!
+                                        </h5>
+                                       
+                                    </li>
+                    <?php endif; ?>
+                    <?php wp_reset_query(); ?>
+                   
                 </ul>
             </div>
         </div>
@@ -84,12 +92,12 @@
             <?php get_template_part('content', get_post_format());?>
 
             <?php endwhile; ?>
-
             <?php else : ?>
-
             <p class="lead">Nenhuma publicação encontrada!</p>
 
             <?php endif; ?>
+
+            <?php wp_reset_query(); ?>
 
             <div class="mt-3 mb-4">
                 <?php next_posts_link('Mais antigos'); ?>
@@ -121,7 +129,7 @@
             <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
                 <div class="card border-card-footer">
                     <div class="card-body">
-                       <?php the_content(); ?> 
+                        <?php the_content(); ?>
                     </div>
                 </div>
             </div>
@@ -133,9 +141,9 @@
                 </p>
             </div>
             <?php endif; ?>
+            <?php wp_reset_query(); ?>
 
 
-            
         </div>
     </div>
 </div>
