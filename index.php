@@ -116,7 +116,7 @@
 
             <?php if( $the_query -> have_posts() ) : 
                 while ( $the_query-> have_posts() ) : 
-                $the_query->have_posts(); ?>
+                $the_query->the_post(); ?>
 
             <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
                 <div class="card border-card-footer">
