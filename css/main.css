@@ -11,7 +11,7 @@
 }
 
 .banner-header {
-  min-height: 350px;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
 }

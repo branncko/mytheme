@@ -3,12 +3,12 @@
 <?php get_header();?>
 
 <div class="card border-0 text-white text-center">
-    <img src="./assets/banner.png" class="card-img banner-header" alt="imagem Banner ">
+    <img src="<?php the_field('banner_imagem'); ?>" class="card-img banner-header" alt="imagem Banner ">
     <div class="card-img-overlay bg-banner-header p-0 m-0 row">
         <div class="col align-self-end">
-            <p class="mb-0 lead"> Emprestimo Pessoal</p>
-            <h1 class="mb-3">A solução para quem pensa no futuro</h1>
-            <p><a href="#" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a></p>
+            <p class="mb-0 lead"><?php the_field('banner_subtitulo'); ?></p>
+            <h1 class="mb-3"><?php the_field('banner_titulo'); ?></h1>
+            <p><a href="<?php the_field('banner_link'); ?>" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a></p>
         </div>
     </div>
 
@@ -74,7 +74,7 @@
                     <?php else : ?>
                                 <li class="list-group-item border-0">
                                         <h5>
-                                            Nenhuma solição cadastrada!
+                                            Nenhuma solução cadastrada na index!
                                         </h5>
                                        
                                     </li>
