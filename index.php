@@ -50,7 +50,7 @@
 
                         $page_args = array(
                         'post_type' => 'page', 
-                        'post_parent' => '710',
+                        // 'post_parent' => '710',
                         'posts_per_page' => '4'
 
                         );
@@ -72,7 +72,7 @@
                     <?php else : ?>
                                 <li class="list-group-item border-0">
                                         <h5>
-                                            Nenhuma solição cadastrada!
+                                            Nenhuma solução cadastrada!
                                         </h5>
                                        
                                     </li>
