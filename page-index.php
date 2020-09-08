@@ -52,7 +52,7 @@
 
                         $page_args = array(
                         'post_type' => 'page', 
-                        'post_parent' => '710',
+                        'post_parent' => '710, 22',
                         'posts_per_page' => '4'
 
                         );
