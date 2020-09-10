@@ -3,12 +3,14 @@
 <?php get_header();?>
 
 <div class="card border-0 text-white text-center">
-    <img src="<?php the_field('banner_imagem'); ?>" class="card-img banner-header" alt="imagem Banner ">
+    <img src="<?php echo get_post_meta(get_the_ID(), 'cmb2_banner_imagem', true); ?>" class="card-img banner-header"
+        alt="imagem Banner ">
     <div class="card-img-overlay bg-banner-header p-0 m-0 row">
         <div class="col align-self-end">
-            <p class="mb-0 lead"><?php the_field('banner_subtitulo'); ?></p>
+            <p class="mb-0 lead"><?php echo get_post_meta(get_the_ID(), 'cmb2_banner_subtitulo', true); ?></p>
             <h1 class="mb-3"><?php echo get_post_meta(get_the_ID(), 'cmb2_banner_titulo', true); ?></h1>
-            <p><a href="<?php the_field('banner_link'); ?>" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a></p>
+            <p><a href="<?php echo get_post_meta(get_the_ID(), 'cmb2_banner_link', true); ?>"
+                    class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a></p>
         </div>
     </div>
 
@@ -16,6 +18,7 @@
 
 <div class="container">
     <div class="row my-5 pt-5">
+
         <div class="col-lg-4 col-sm-6">
             <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01">
             <h5>
@@ -26,7 +29,6 @@
 
             <p>
                 <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
-
             </p>
         </div>
 
@@ -62,25 +64,25 @@
                         while ( $page_query -> have_posts() ) : 
                         $page_query->the_post(); ?>
 
-                            <li class="list-group-item border-0">
-                                <h5>
-                                    <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?></a>
-                                </h5>
-                                <p class="mb-0"><?php the_excerpt(); ?> </p>
-                            </li>
+                    <li class="list-group-item border-0">
+                        <h5>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?></a>
+                        </h5>
+                        <p class="mb-0"><?php the_excerpt(); ?> </p>
+                    </li>
 
                     <?php endwhile; ?>
                     <?php else : ?>
-                                <li class="list-group-item border-0">
-                                        <h5>
-                                            Nenhuma solução cadastrada na index!
-                                        </h5>
-                                       
-                                    </li>
+                    <li class="list-group-item border-0">
+                        <h5>
+                            Nenhuma solução cadastrada na index!
+                        </h5>
+
+                    </li>
                     <?php endif; ?>
                     <?php wp_reset_query(); ?>
-                   
+
                 </ul>
             </div>
         </div>
