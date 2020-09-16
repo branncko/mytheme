@@ -17,6 +17,38 @@
 <div class="container">
     <div class="row my-5 pt-5">
 
+                <?php 
+
+            $down_args = array(
+            'post_type' => 'downloads', 
+            'posts_per_page' => '4'
+
+            );
+            $down_query = new WP_Query( $down_args );  ?>
+
+            <?php if( $down_query -> have_posts() ) : 
+            while ( $down_query -> have_posts() ) : 
+            $down_query->the_post(); ?>
+
+            <div class="col-lg-4 col-sm-6">
+                <h5>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?></a>
+                </h5>
+                <p class="mb-0"><?php the_excerpt(); ?> </p>
+            </div>
+
+            <?php endwhile; ?>
+            <?php else : ?>
+            <div class="col-lg-4 col-sm-6">
+                <h5>
+                    Nenhum download cadastrado!
+                </h5>
+
+            </div>
+            <?php endif; ?>
+            <?php wp_reset_query(); ?>
+
         <div class="col-lg-4 col-sm-6">
             <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01">
             <h5>
