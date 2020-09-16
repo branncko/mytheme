@@ -8,48 +8,53 @@
         <div class="col align-self-end">
             <p class="mb-0 lead"><?php the_field('cmb2_banner_subtitulo'); ?></p>
             <h1 class="mb-3"><?php echo get_post_meta(get_the_ID(), 'cmb2_banner_titulo', true); ?></h1>
-            <p><a href="<?php the_field('cmb2_banner_link'); ?>" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a></p>
+            <p><a href="<?php the_field('cmb2_banner_link'); ?>" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a>
+            </p>
         </div>
     </div>
 
 </div>
 
 <div class="container">
-    <div class="row my-5 pt-5">
+    <div class="row my-5 pt-2">
 
-                <?php 
+        <?php 
 
             $down_args = array(
             'post_type' => 'downloads', 
-            'posts_per_page' => '4'
+            'posts_per_page' => '2'
 
             );
             $down_query = new WP_Query( $down_args );  ?>
 
-            <?php if( $down_query -> have_posts() ) : 
+        <?php if( $down_query -> have_posts() ) : 
             while ( $down_query -> have_posts() ) : 
             $down_query->the_post(); ?>
 
-            <div class="col-lg-4 col-sm-6">
-                <h5>
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_title(); ?></a>
-                </h5>
-                <p class="mb-0"><?php the_excerpt(); ?> </p>
-            </div>
-
-            <?php endwhile; ?>
-            <?php else : ?>
-            <div class="col-lg-4 col-sm-6">
-                <h5>
-                    Nenhum download cadastrado!
-                </h5>
-
-            </div>
-            <?php endif; ?>
-            <?php wp_reset_query(); ?>
-
         <div class="col-lg-4 col-sm-6">
+
+            <?php the_post_thumbnail('large', array('class' => 'img-fluid mb-3') ); ?>
+
+            <h5>
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?></a>
+            </h5>
+            <p class="mb-0"><?php the_excerpt(); ?> </p>
+        </div>
+
+        <?php endwhile; ?>
+        <?php else : ?>
+        <div class="col-lg-4 col-sm-6">
+            <h5>
+                Nenhum download cadastrado!
+            </h5>
+
+        </div>
+        <?php endif; ?>
+        <?php wp_reset_query(); ?>
+
+
+        <!-- <div class="col-lg-4 col-sm-6">
             <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01">
             <h5>
                 <a href="#">Empréstimo Consignado</a>
@@ -60,9 +65,9 @@
             <p>
                 <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
             </p>
-        </div>
+        </div> -->
 
-        <div class="col-lg-4 col-sm-6">
+        <!-- <div class="col-lg-4 col-sm-6">
             <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01 ">
             <h5>
                 <a href="#">Empréstimo Consignado</a>
@@ -74,7 +79,7 @@
                 <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
 
             </p>
-        </div>
+        </div> -->
 
         <div class="col-xl-4 col-12 mt-3 mt-xl-0">
             <div class="card">
