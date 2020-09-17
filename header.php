@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row py-4 align-items-center justify-content-center text-white">
                 <div class="col-8 col-md-4 col-lg-3 mb-4 mb-md-0"> <a href="<?php bloginfo('url'); ?>/">
-                    <?php 
+                        <?php 
 
                 $lc_custom_logo = get_theme_mod('custom_logo');
                 $logo = wp_get_attachment_image_src($lc_custom_logo , 'full');
@@ -38,10 +38,10 @@
                 </div>
                 <div class="col-12 col-md-8 col-lg-9 text-center text-md-right text-white lead">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item mr-3">
+                        <!-- <li class="list-inline-item mr-3">
                             <i class="fas fa-phone"></i>
                             (88) 9 9956-7891
-                        </li>
+                        </li> -->
 
                         <li class="list-inline-item mr-3 mr-md-0 mr-lg-3'">
                             <i class="fab fa-whatsapp "></i>

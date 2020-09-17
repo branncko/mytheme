@@ -66,10 +66,10 @@
       <div class="row">
         <div class="col text-center text-white">
           <ul class="list-inline mb-0">
-            <li class="list-inline-item mr-3">
+            <!-- <li class="list-inline-item mr-3">
               <i class="fas fa-phone"></i>
               (88) 9 9956-7891
-            </li>
+            </li> -->
 
             <li class="list-inline-item mr-3">
               <i class="fab fa-whatsapp "></i>
