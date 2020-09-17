@@ -93,7 +93,7 @@
 
             <?php endwhile; ?>
             <?php else : ?>
-            <p class="lead">Nenhuma publicação encontrada!</p>
+            <p class="lead">Nenhuma publicação encontrada! index</p>
 
             <?php endif; ?>
 

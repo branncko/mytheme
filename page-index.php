@@ -32,8 +32,8 @@
             $down_query->the_post(); ?>
 
         <div class="col-lg-4 col-sm-6">
-
-            <?php the_post_thumbnail('large', array('class' => 'img-fluid mb-3') ); ?>
+            <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('large', array('class' => 'img-fluid mb-3') ); ?> </a>
 
             <h5>
                 <a href="<?php the_permalink(); ?>">
@@ -52,34 +52,6 @@
         </div>
         <?php endif; ?>
         <?php wp_reset_query(); ?>
-
-
-        <!-- <div class="col-lg-4 col-sm-6">
-            <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01">
-            <h5>
-                <a href="#">Empréstimo Consignado</a>
-            </h5>
-            <p>As melhores taxas e condições para voce que deseja realizar todos os seus sonhos na melhor fase da vida
-            </p>
-
-            <p>
-                <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
-            </p>
-        </div> -->
-
-        <!-- <div class="col-lg-4 col-sm-6">
-            <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01 ">
-            <h5>
-                <a href="#">Empréstimo Consignado</a>
-            </h5>
-            <p>As melhores taxas e condições para voce que deseja realizar todos os seus sonhos na melhor fase da vida
-            </p>
-
-            <p>
-                <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
-
-            </p>
-        </div> -->
 
         <div class="col-xl-4 col-12 mt-3 mt-xl-0">
             <div class="card">
