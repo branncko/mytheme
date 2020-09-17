@@ -20,7 +20,7 @@ function mt_cpt() {
         'label'               => __('downloads','mytheme'),
         'description'         => __('Disponibilização de arquivos grátis','mytheme'),
         'labels'              => $labels,
-        'supports'            => array('title', 'custom-fields', 'excerpt', 'thumbnail'),
+        'supports'            => array('title',  'excerpt', 'thumbnail'),
         'hierachical'         => false,
         'public'              => true,
         'show_ui'             => true,

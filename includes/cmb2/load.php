@@ -12,5 +12,6 @@ function the_field($key, $page_id = 0) {
 
 // carrega os campos personalidados do CMB2
 require_once get_template_directory() . '/includes/cmb2/cmb2.php';
+require_once get_template_directory() . '/includes/cmb2/downloads.php';
 
 ?>
