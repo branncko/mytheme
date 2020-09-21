@@ -1,4 +1,4 @@
-<div class="col-lg-4 d-none d-lg-block">
+<div class="col-lg-4 d-lg-block">
     <?php 
     dynamic_sidebar( 'Busca' );
     ?>
