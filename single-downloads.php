@@ -12,25 +12,28 @@
 
             <img src="<?php the_field('cmb2_down_imagem');?>" alt="iamgem" class="img-fluid mb-3 p-2 card">
 
-            <p class="card text-muted mt-3"><?php the_excerpt();?></p>
+            <h5 class="p-3"><?php the_excerpt();?></h5>
 
-            
+
 
             <div class="well hidden-xs" id="sidebar">
-            <h4 id="sidebarh4">Informacion:</h4>
-            <i class="fa fa-user"></i> <a
-                href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a><br>
-            <i class="fa fa-folder-open"></i> <?php the_category(','); ?><br>
-            <i class="fa fa-comments" aria-hidden="true"></i>
-            <?php comments_number( 'no responses', 'one response', '% responses' ); ?><br>
-            <i class="fa fa-eye" aria-hidden="true"></i> 
-            <i class="fa fa-clock-o"></i> Publicado as <?php the_time(); ?> de <?php the_date('d/m/Y  '); ?> <br>
-            <i class="fas fa-edit"  aria-hidden="true"></i> Última alteração:
-            <?php the_modified_date(' d \d\e F \d\e Y \a\s H:i:s'); ?><br>
-        </div>
+                <h4 class="p-1">Detalhes</h4>
+
+                <i class="fa fa-user"></i> <a
+                    href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a><br>
+                <i class="fa fa-folder-open"></i> <?php the_category('extensao'); ?><br>
+                <i class="fa fa-comments" aria-hidden="true"></i>
+                <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                
+                <i class="fa fa-clock-o"></i> Publicado as <?php the_time('H:i:s'); ?> de
+                <?php the_date('d \d\e F \d\e Y '); ?> <br>
+                <i class="fas fa-edit" aria-hidden="true"></i> Última alteração em
+                <?php the_modified_date(' d \d\e F \d\e Y \a\s H:i:s'); ?><br>
+            </div>
 
             <p><a href="<?php the_field('cmb2_down_link'); ?>" target="_blank"
-                    class="btn btn-lg btn-lc-orange mb-3 mt-2">Baixar</a>
+                    class="btn btn-lg btn-lc-orange mb-3 mt-3">Baixar</a>
             </p>
 
             <div class="mt-3 mb-4">

@@ -20,7 +20,8 @@ function mt_cpt() {
         'label'               => __('downloads','mytheme'),
         'description'         => __('Disponibilização de arquivos grátis','mytheme'),
         'labels'              => $labels,
-        'supports'            => array('title',  'excerpt', 'thumbnail'),
+        'supports'            => array('title',  'excerpt','thumbnail'),
+        'taxonomies'    => array('category', 'tags'),
         'hierachical'         => false,
         'public'              => true,
         'show_ui'             => true,
@@ -41,4 +42,5 @@ function mt_cpt() {
 } 
 
 add_action('init', 'mt_cpt', 0);
+
 ?>
