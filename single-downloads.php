@@ -19,17 +19,15 @@
             <div class="well hidden-xs" id="sidebar">
                 <h4 class="p-1">Detalhes</h4>
 
-                <i class="fa fa-user"></i> <a
-                    href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a><br>
-                <i class="fa fa-folder-open"></i> <?php the_category('extensao'); ?><br>
-                <i class="fa fa-comments" aria-hidden="true"></i>
-                <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br>
+                <i class="fa fa-folder-open"></i> <?php the_category(', '); ?><br>
+                <!-- <i class="fa fa-comments" aria-hidden="true"></i>
+                <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
                 <i class="fa fa-eye" aria-hidden="true"></i>
-                
-                <i class="fa fa-clock-o"></i> Publicado as <?php the_time('H:i:s'); ?> de
-                <?php the_date('d \d\e F \d\e Y '); ?> <br>
-                <i class="fas fa-edit" aria-hidden="true"></i> Última alteração em
-                <?php the_modified_date(' d \d\e F \d\e Y \a\s H:i:s'); ?><br>
+
+                <i class="fa fa-clock-o"></i> Publicado em
+                <?php the_date('d/m/Y \|\ H:i:s'); ?> <br>
+                <i class="fas fa-edit" aria-hidden="true"></i> Alterado em
+                <?php the_modified_date('d/m/Y \|\ H:i:s'); ?><br>
             </div>
 
             <p><a href="<?php the_field('cmb2_down_link'); ?>" target="_blank"

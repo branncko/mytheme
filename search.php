@@ -8,7 +8,7 @@
             <?php 
         if ( is_search() ) :
         $total_results = $wp_query->found_posts;
-            echo '<p class="lead text-center">' . sprintf(__('Sua busca obteve %s resultado(s)', 'MyTheme'), $total_results, get_search_query() ) . '</p>';
+            echo '<p class="lead text-center">' . sprintf(__('Sua busca obteve %s resultado(s)', 'mytheme'), $total_results, get_search_query() ) . '</p>';
         endif; 
     ?>
 

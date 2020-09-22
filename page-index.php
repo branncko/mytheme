@@ -22,7 +22,7 @@
 
             $down_args = array(
             'post_type' => 'downloads', 
-            'posts_per_page' => '2'
+            'posts_per_page' => '-1'
 
             );
             $down_query = new WP_Query( $down_args );  ?>
@@ -33,13 +33,13 @@
 
         <div class="col-lg-4 col-sm-6">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('large', array('class' => 'img-fluid mb-3') ); ?> </a>
+                <?php the_post_thumbnail('full', array('class' => 'img-fluid my-3') ); ?> </a>
 
-            <h5>
+            <!-- <h5>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?></a>
             </h5>
-            <p class="mb-0"><?php the_excerpt(); ?> </p>
+            <p class="mb-0"><?php the_excerpt(); ?> </p> -->
         </div>
 
         <?php endwhile; ?>
@@ -53,52 +53,21 @@
         <?php endif; ?>
         <?php wp_reset_query(); ?>
 
-        <div class="col-xl-4 col-12 mt-3 mt-xl-0">
-            <div class="card">
-                <ul class="list-group list-group-flush">
-
-                    <?php 
-
-                        $page_args = array(
-                        'post_type' => 'page', 
-                        // 'post_parent' => '710, 22',
-                        'posts_per_page' => '4'
-
-                        );
-                        $page_query = new WP_Query( $page_args );  ?>
-
-                    <?php if( $page_query -> have_posts() ) : 
-                        while ( $page_query -> have_posts() ) : 
-                        $page_query->the_post(); ?>
-
-                    <li class="list-group-item border-0">
-                        <h5>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?></a>
-                        </h5>
-                        <p class="mb-0"><?php the_excerpt(); ?> </p>
-                    </li>
-
-                    <?php endwhile; ?>
-                    <?php else : ?>
-                    <li class="list-group-item border-0">
-                        <h5>
-                            Nenhuma solução cadastrada na index!
-                        </h5>
-
-                    </li>
-                    <?php endif; ?>
-                    <!-- <?php wp_reset_query(); ?> -->
-
-                </ul>
-            </div>
+        <?php dynamic_sidebar( 'Super Banner' ); ?>
+        
+        <div class="mt-3 mb-4">
+            <?php next_posts_link('Mais antigos'); ?>
+            <?php previous_posts_link('Mais novos'); ?>
         </div>
+
+
     </div>
     <div class="row">
+    
         <div class="col-lg-8 col-12">
             <h5 class="border-bottom  pb-2 mb-4"><i class="fas fa-newspaper"></i> Novidades</h5>
 
-            <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
+            <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <h3 class="lead">Aqui teve alteração the_post</h3>
 
@@ -120,6 +89,8 @@
         </div>
         <!-- Sidebar 2 -->
         <?php get_sidebar();?>
+        <!-- <?php include('includes\teste.php'); ?> -->
+
     </div>
 </div>
 <!-- caixas de Comentários  -->
@@ -127,34 +98,9 @@
     <div class="container">
         <div class="row">
 
-            <?php 
-
-                    $args = array('post_type' => 'depoimentos', 
-                    'posts_per_page' => 2
-                    );
-                    $the_query = new WP_Query( $args );
-                ?>
-
-            <?php if( $the_query -> have_posts() ) : 
-                while ( $the_query-> have_posts() ) : 
-                $the_query->the_post(); ?>
-
-            <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
-                <div class="card border-card-footer">
-                    <div class="card-body">
-                        <?php the_content(); ?>
-                    </div>
-                </div>
-            </div>
-            <?php endwhile; ?>
-            <?php else : ?>
-            <div class="col-12">
-                <p class="lead">
-                    Nenhum Depoimento
-                </p>
-            </div>
-            <?php endif; ?>
-            <?php wp_reset_query(); ?>
+            <!-- include -->
+            <!-- <?php include('includes\depoimentos.php'); ?> -->
+            
 
 
         </div>

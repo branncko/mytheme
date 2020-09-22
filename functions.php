@@ -28,7 +28,7 @@ register_nav_menus(array(
 ));
 // Miniaturas
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 1280, 720, true); 
+set_post_thumbnail_size( 1080, 720, true); 
 
 // Definir resumo
 add_filter( 'excerpt_length', function($length) {
@@ -62,6 +62,17 @@ register_sidebar(
     array(
         'name'          => 'Cards',
         'id'            => 'cards',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+
+));
+
+register_sidebar( 
+    array(
+        'name'          => 'Super Banner',
+        'id'            => 'super-banner',
         'before_widget' => '',
         'after_widget'  => '',
         'before_title'  => '',
