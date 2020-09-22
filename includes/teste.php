@@ -1,8 +1,7 @@
-<div class="col-xl-4 col-12 mt-3 mt-xl-0">
-            <div class="card">
-                <ul class="list-group list-group-flush">
+<div class="card">
+    <ul class="list-group list-group-flush">
 
-                    <?php 
+        <?php 
 
                         $page_args = array(
                         'post_type' => 'page', 
@@ -12,29 +11,28 @@
                         );
                         $page_query = new WP_Query( $page_args );  ?>
 
-                    <?php if( $page_query -> have_posts() ) : 
+        <?php if( $page_query -> have_posts() ) : 
                         while ( $page_query -> have_posts() ) : 
                         $page_query->the_post(); ?>
 
-                    <li class="list-group-item border-0">
-                        <h5>
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?></a>
-                        </h5>
-                        <p class="mb-0"><?php the_excerpt(); ?> </p>
-                    </li>
+        <li class="list-group-item border-0">
+            <h5>
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?></a>
+            </h5>
+            <p class="mb-0"><?php the_excerpt(); ?> </p>
+        </li>
 
-                    <?php endwhile; ?>
-                    <?php else : ?>
-                    <li class="list-group-item border-0">
-                        <h5>
-                            Nenhuma solução cadastrada na index!
-                        </h5>
+        <?php endwhile; ?>
+        <?php else : ?>
+        <li class="list-group-item border-0">
+            <h5>
+                Nenhuma solução cadastrada na index!
+            </h5>
 
-                    </li>
-                    <?php endif; ?>
-                    <!-- <?php wp_reset_query(); ?> -->
+        </li>
+        <?php endif; ?>
+        <!-- <?php wp_reset_query(); ?> -->
 
-                </ul>
-            </div>
-        </div>
+    </ul>
+</div>

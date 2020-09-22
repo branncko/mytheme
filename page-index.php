@@ -17,29 +17,28 @@
 
 <div class="container">
     <div class="row my-5 pt-2">
-
         <?php 
 
-            $down_args = array(
-            'post_type' => 'downloads', 
-            'posts_per_page' => '-1'
+                    $down_args = array(
+                    'post_type' => 'downloads', 
+                    'posts_per_page' => '-1'
 
-            );
-            $down_query = new WP_Query( $down_args );  ?>
+                    );
+                    $down_query = new WP_Query( $down_args );  ?>
 
         <?php if( $down_query -> have_posts() ) : 
-            while ( $down_query -> have_posts() ) : 
-            $down_query->the_post(); ?>
+                        while ( $down_query -> have_posts() ) : 
+                        $down_query->the_post(); ?>
 
         <div class="col-lg-4 col-sm-6">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('full', array('class' => 'img-fluid my-3') ); ?> </a>
 
             <!-- <h5>
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_title(); ?></a>
-            </h5>
-            <p class="mb-0"><?php the_excerpt(); ?> </p> -->
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?></a>
+                    </h5>
+                    <p class="mb-0"><?php the_excerpt(); ?> </p> -->
         </div>
 
         <?php endwhile; ?>
@@ -53,8 +52,9 @@
         <?php endif; ?>
         <?php wp_reset_query(); ?>
 
-        <?php dynamic_sidebar( 'Super Banner' ); ?>
         
+
+
         <div class="mt-3 mb-4">
             <?php next_posts_link('Mais antigos'); ?>
             <?php previous_posts_link('Mais novos'); ?>
@@ -63,7 +63,7 @@
 
     </div>
     <div class="row">
-    
+
         <div class="col-lg-8 col-12">
             <h5 class="border-bottom  pb-2 mb-4"><i class="fas fa-newspaper"></i> Novidades</h5>
 
@@ -85,11 +85,15 @@
                 <?php next_posts_link('Mais antigos'); ?>
                 <?php previous_posts_link('Mais novos'); ?>
             </div>
+            <?php include('includes\teste.php'); ?>
+            <?php include('includes\depoimentos.php'); ?>
+
 
         </div>
         <!-- Sidebar 2 -->
         <?php get_sidebar();?>
-        <!-- <?php include('includes\teste.php'); ?> -->
+
+        
 
     </div>
 </div>
@@ -99,8 +103,9 @@
         <div class="row">
 
             <!-- include -->
-            <!-- <?php include('includes\depoimentos.php'); ?> -->
             
+            <?php dynamic_sidebar( 'Super Banner' ); ?>
+
 
 
         </div>
