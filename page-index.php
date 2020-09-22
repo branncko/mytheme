@@ -104,7 +104,7 @@
 
             <!-- include -->
             
-            <?php dynamic_sidebar( 'Super Banner' ); ?>
+            <?php dynamic_sidebar('Super Banner'); ?>
 
 
 
