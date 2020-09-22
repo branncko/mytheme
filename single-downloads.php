@@ -8,7 +8,7 @@
 
             <h1 class="mt-3 mb-2"><?php the_title(); ?></h1>
 
-            <!-- <?php the_post_thumbnail('full', array('class' => 'center img-fluid mb-3') ); ?> -->
+            <!-- <?php the_post_thumbnail('medium', array('class' => 'center img-fluid mb-3') ); ?> -->
 
             <img src="<?php the_field('cmb2_down_imagem');?>" alt="iamgem" class="img-fluid mb-3 p-2 card">
 
