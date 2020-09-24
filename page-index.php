@@ -7,7 +7,7 @@
     <div class="card-img-overlay bg-banner-header p-0 m-0 row">
         <div class="col align-self-end">
             <p class="mb-0 lead"><?php the_field('cmb2_banner_subtitulo'); ?></p>
-            <h1 class="mb-3"><?php echo get_post_meta(get_the_ID(), 'cmb2_banner_titulo', true); ?></h1>
+            <h1 class="mb-3"><?php the_field('cmb2_banner_titulo'); ?></h1>
             <p><a href="<?php the_field('cmb2_banner_link'); ?>" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a>
             </p>
         </div>

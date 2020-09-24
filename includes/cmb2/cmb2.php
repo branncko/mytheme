@@ -6,7 +6,7 @@ function cmb2_fields_home() {
         'title' => 'Cabeçalho',
         'object_types' => ['page'],
         'show_on' => [
-            'jey' => 'page-template',
+            'key' => 'page-template',
             'value' => 'page-index.php'
         ],
     ]);
