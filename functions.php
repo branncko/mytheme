@@ -61,6 +61,30 @@ function posts_link_attibutes() {
     return 'class="btn btn-lc-orange"';
 }
 
+// Widgets e Sidebar
+
+register_sidebar( 
+    array(
+        'name'          => 'Ads Topo',
+        'id'            => 'ads-topo',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+
+));
+
+register_sidebar( 
+    array(
+        'name'          => 'Super Banner',
+        'id'            => 'super-banner',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+
+));
+
 register_sidebar( 
     array(
         'name'          => 'Busca',
@@ -83,16 +107,7 @@ register_sidebar(
 
 ));
 
-register_sidebar( 
-    array(
-        'name'          => 'Super Banner',
-        'id'            => 'super-banner',
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
 
-));
 
 include_once get_template_directory() .  "/cpt/downloads.php";
 include_once get_template_directory() .  "/cpt/depoimentos.php";

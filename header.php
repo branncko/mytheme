@@ -37,31 +37,7 @@
 
                 </div>
                 <div class="col-12 col-md-8 col-lg-9 text-center text-md-right text-white lead">
-                    <ul class="list-inline mb-0">
-                        <!-- <li class="list-inline-item mr-3">
-                            <i class="fas fa-phone"></i>
-                            (88) 9 9956-7891
-                        </li> -->
-
-                        <li class="list-inline-item mr-3 mr-md-0 mr-lg-3'">
-                            <i class="fab fa-whatsapp "></i>
-                            (88) 9 9956-7891
-                        </li>
-
-                        <li class="list-inline-item mr-3">
-                            <i class="fas fa-inbox"></i>
-                            contato@brancosousa.com.br
-                        </li>
-
-                        <li class="list-inline-item -me-3">
-                            <i class="fab fa-facebook-square"></i>
-                        </li>
-
-                        <li class="list-inline-item">
-                            <i class="fab fa-instagram"></i>
-                        </li>
-
-                    </ul>
+                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
                 </div>
             </div>
 
