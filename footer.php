@@ -1,5 +1,5 @@
  <!-- Rodapé -->
- <div class="bg-lc-dark py-5 ">
+ <div class="bg-mt-dark py-5 ">
      <div class="container">
          <div class="row">
              <div class="col text-center text-white">

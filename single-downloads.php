@@ -57,7 +57,7 @@
     </div>
 </div>
 
-<div class="bg-lc-gray py-2 mt-5">
+<div class="bg-mt-gray py-2 mt-5">
 
     <div class="container">
         <div class="row">

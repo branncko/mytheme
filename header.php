@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="bg-lc-dark">
+    <div class="bg-mt-dark">
         <div class="container">
             <div class="row py-4 align-items-center justify-content-center text-white">
                 <div class="col-8 col-md-4 col-lg-3 mb-4 mb-md-0"> <a href="<?php bloginfo('url'); ?>/">
