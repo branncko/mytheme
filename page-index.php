@@ -98,17 +98,19 @@
     </div>
 </div>
 <!-- caixas de Comentários  -->
-<div class="bg-lc-gray py-4 mt-4 mb-md-0">
+
+
+
+<div class="bg-lc-gray py-2 mt-5">
+
     <div class="container">
         <div class="row">
-
-            <!-- include -->
-            
-            <?php dynamic_sidebar('Super Banner'); ?>
-
-
-
+            <div class="col text-center">
+                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+            </div>
         </div>
     </div>
+
 </div>
+
 <?php get_footer(); ?>
