@@ -105,8 +105,8 @@
 
     <div class="container">
         <div class="row">
-            <div class="col text-center">
-                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+            <div class="col col-md text-center">
+                <?php  dynamic_sidebar( 'Super Banner' );  ?>
             </div>
         </div>
     </div>

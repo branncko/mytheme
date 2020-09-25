@@ -1,20 +1,20 @@
-$lc-dark: #2a3342;
-$lc-gray: #82c8e9;
-$lc-orange-dark: #075685;
-$lc-orange: #1168eb;
-$lc-orange-light: #109797;
-$lc-abacate: #9bf804;
+$mt-dark: #2a3342;
+$mt-gray: #82c8e9;
+$mt-orange-dark: #075685;
+$mt-orange: #1168eb;
+$mt-orange-light: #109797;
+$mt-abacate: #9bf804;
 
 $theme-colors: ( 
-    "lc-dark": $lc-dark, 
-    "lc-gray": $lc-gray,
-    "lc-orange": $lc-orange,
-    "lc-orange-light": $lc-orange-light,
-    "lc-orange-dark" : $lc-orange-dark,
-    "lc-abacate": $lc-abacate
+    "mt-dark": $mt-dark, 
+    "mt-gray": $mt-gray,
+    "mt-orange": $mt-orange,
+    "mt-orange-light": $mt-orange-light,
+    "mt-orange-dark" : $mt-orange-dark,
+    "mt-abacate": $mt-abacate
 );
 
-$link-color: $lc-orange-dark;
+$link-color: $mt-orange-dark;
 $link-hover-color: darken ($link-color, 15%);
 $enable-rounded: false;
 
@@ -28,7 +28,7 @@ $enable-rounded: false;
 }
 
 .border-card-footer {
-   border-left: solid 4px $lc-orange-light !important;
+   border-left: solid 4px $mt-orange-light !important;
    border-top: none !important;
    border-bottom: none !important;
    border-right: none !important;

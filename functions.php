@@ -1,6 +1,6 @@
 <?php
 // Funções Iniciais
-function lc_theme_support(){
+function mt_theme_support(){
 
     //Titulo de Site
     add_theme_support('title-tag');
@@ -12,14 +12,14 @@ function lc_theme_support(){
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     
 }
-add_action('after_setup_theme' , 'lc_theme_support'); 
+add_action('after_setup_theme' , 'mt_theme_support'); 
 
 if (!function_exists('wp_render_title_tag'))    {
     
-    function lc_render_title()  {
+    function mt_render_title()  {
         ?> <title> <?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?>  </title> <?php
     }
-    add_action('wp_head', 'lc_render_title');
+    add_action('wp_head', 'mt_render_title');
 }
 // Cria os menus
 register_nav_menus(array(
@@ -58,7 +58,7 @@ add_filter('next_posts_link_attributes', 'posts_link_attibutes');
 add_filter('previous_posts_link_attributes', 'posts_link_attibutes');
 
 function posts_link_attibutes() {
-    return 'class="btn btn-lc-orange"';
+    return 'class="btn btn-mt-orange"';
 }
 
 // Widgets e Sidebar
@@ -89,7 +89,7 @@ register_sidebar(
     array(
         'name'          => 'Busca',
         'id'            => 'busca',
-        'before_widget' => '<div class="card bg-lc-gray border-0 mb-4"><div class="card-body">',
+        'before_widget' => '<div class="card bg-mt-gray border-0 mb-4"><div class="card-body">',
         'after_widget'  => '</div></div>',
         'before_title'  => '<h5>',
         'after_title'   => '</h5>',
