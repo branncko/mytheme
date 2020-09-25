@@ -30,6 +30,20 @@ register_nav_menus(array(
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 1080, 720, true); 
 
+
+if (!function_exists('mytheme_image_sizes')) {
+	function mytheme_image_sizes() {
+		add_image_size('mytheme-slider', 1030, 438, true);
+		add_image_size('mytheme-content', 678, 381, true);
+		add_image_size('mytheme-large', 678, 509, true);
+		add_image_size('mytheme-medium', 326, 245, true);
+		add_image_size('mytheme-small', 800, 600, true);
+	}
+}
+add_action('after_setup_theme', 'mytheme_image_sizes');
+
+
+
 // Definir resumo
 add_filter( 'excerpt_length', function($length) {
     return 15;
