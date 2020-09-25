@@ -32,7 +32,7 @@
 
         <div class="col-lg-4 col-sm-6">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('capa', array('class' => 'img-fluid my-3') ); ?> </a>
+                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3') ); ?> </a>
 
             <!-- <h5>
                         <a href="<?php the_permalink(); ?>">
@@ -91,7 +91,7 @@
 
         </div>
         <!-- Sidebar 2 -->
-        <?php get_sidebar();?>
+        
 
         
 
@@ -105,7 +105,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col col-md text-center">
+            <div class="col col-md text-center img-fluid my-3">
                 <?php  dynamic_sidebar( 'Super Banner' );  ?>
             </div>
         </div>
