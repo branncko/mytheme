@@ -34,19 +34,15 @@
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3') ); ?> </a>
 
-            <!-- <h5>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?></a>
-                    </h5>
-                    <p class="mb-0"><?php the_excerpt(); ?> </p> -->
+           
         </div>
 
         <?php endwhile; ?>
         <?php else : ?>
         <div class="col-lg-4 col-sm-6">
-            <h5>
+            <h2>
                 Nenhum download cadastrado!
-            </h5>
+            </h2>
 
         </div>
         <?php endif; ?>
@@ -55,47 +51,8 @@
         
 
 
-        <div class="mt-3 mb-4">
-            <?php next_posts_link('Mais antigos'); ?>
-            <?php previous_posts_link('Mais novos'); ?>
-        </div>
-
-
     </div>
-    <div class="row">
-
-        <div class="col-lg-8 col-12">
-            <h5 class="border-bottom  pb-2 mb-4"><i class="fas fa-newspaper"></i> Novidades</h5>
-
-            <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-            <h3 class="lead">Aqui teve alteração the_post</h3>
-
-            <!-- <?php get_template_part('content', get_post_format());?> -->
-
-            <?php endwhile; ?>
-            <?php else : ?>
-            <p class="lead">Nenhuma publicação encontrada! index</p>
-
-            <?php endif; ?>
-
-            <?php wp_reset_query(); ?>
-
-            <div class="mt-3 mb-4">
-                <?php next_posts_link('Mais antigos'); ?>
-                <?php previous_posts_link('Mais novos'); ?>
-            </div>
-            <?php include('includes\teste.php'); ?>
-            <?php include('includes\depoimentos.php'); ?>
-
-
-        </div>
-        <!-- Sidebar 2 -->
-        
-
-        
-
-    </div>
+    
 </div>
 <!-- caixas de Comentários  -->
 

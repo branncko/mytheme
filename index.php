@@ -15,33 +15,9 @@
 
 <div class="container">
     <div class="row my-5 pt-5">
-        <div class="col-lg-4 col-sm-6">
-            <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01">
-            <h5>
-                <a href="#">Empréstimo Consignado</a>
-            </h5>
-            <p>As melhores taxas e condições para voce que deseja realizar todos os seus sonhos na melhor fase da vida
-            </p>
+        
 
-            <p>
-                <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
-
-            </p>
-        </div>
-
-        <div class="col-lg-4 col-sm-6">
-            <img src="./assets/image-1920x1080.jpg" class="img-fluid mb-3" alt="Imagem 01 ">
-            <h5>
-                <a href="#">Empréstimo Consignado</a>
-            </h5>
-            <p>As melhores taxas e condições para voce que deseja realizar todos os seus sonhos na melhor fase da vida
-            </p>
-
-            <p>
-                <a href="#" class="btn btn-lc-orange">Saiba Mais</a>
-
-            </p>
-        </div>
+      
 
         <div class="col-xl-4 col-12 mt-3 mt-xl-0">
             <div class="card">
@@ -61,25 +37,25 @@
                         while ( $page_query -> have_posts() ) : 
                         $page_query->the_post(); ?>
 
-                            <li class="list-group-item border-0">
-                                <h5>
-                                    <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?></a>
-                                </h5>
-                                <p class="mb-0"><?php the_excerpt(); ?> </p>
-                            </li>
+                    <li class="list-group-item border-0">
+                        <h5>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?></a>
+                        </h5>
+                        <p class="mb-0"><?php the_excerpt(); ?> </p>
+                    </li>
 
                     <?php endwhile; ?>
                     <?php else : ?>
-                                <li class="list-group-item border-0">
-                                        <h5>
-                                            Nenhuma solução cadastrada!
-                                        </h5>
-                                       
-                                    </li>
+                    <li class="list-group-item border-0">
+                        <h5>
+                            Nenhuma solução cadastrada!
+                        </h5>
+
+                    </li>
                     <?php endif; ?>
                     <?php wp_reset_query(); ?>
-                   
+
                 </ul>
             </div>
         </div>
@@ -90,7 +66,7 @@
 
             <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
 
-                        <h3 class="lead">Aqui teve alteração the_post</h3>
+            <h3 class="lead">Aqui teve alteração the_post</h3>
 
             <!-- <?php get_template_part('content', get_post_format());?> -->
 
