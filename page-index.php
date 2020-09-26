@@ -62,7 +62,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col col-md text-center img-fluid my-3">
+            <div class="d-flex justify-content-center super-banner py-3 my-3">
                 <?php  dynamic_sidebar( 'Super Banner' );  ?>
             </div>
         </div>
