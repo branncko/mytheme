@@ -45,7 +45,7 @@
     </div>
     </div>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-lc-gray" role="navigation">
+    <nav class="navbar navbar-expand-md navbar-light bg-mt-gray" role="navigation">
         <div class="container">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"

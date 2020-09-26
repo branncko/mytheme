@@ -31,7 +31,7 @@
             </div>
 
             <p><a href="<?php the_field('cmb2_down_link'); ?>" target="_blank"
-                    class="btn btn-lg btn-lc-orange mb-3 mt-3">Baixar</a>
+                    class="btn btn-lg btn-mt-orange mb-3 mt-3">Baixar</a>
             </p>
 
             <div class="mt-3 mb-4">
