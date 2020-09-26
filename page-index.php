@@ -3,7 +3,7 @@
 <?php get_header();?>
 
 <div class="card border-0 text-white text-center">
-    <img src="<?php the_field('cmb2_banner_imagem'); ?>" class="card-img banner-header" alt="imagem Banner ">
+    <?php dynamic_sidebar( 'Super Banner' ); ?>
     <div class="card-img-overlay bg-banner-header p-0 m-0 row">
         <div class="col align-self-end">
             <p class="mb-0 lead"><?php the_field('cmb2_banner_subtitulo'); ?></p>
