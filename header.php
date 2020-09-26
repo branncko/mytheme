@@ -36,7 +36,7 @@
               ?> </a>
 
                 </div>
-                <div class="col-12 col-md-8 col-lg-9 text-center text-md-right text-white lead">
+                <div class="col-12 col-md-8 col-lg-9 header-ad">
                 <?php  dynamic_sidebar( 'Ads Topo' );  ?>
                 </div>
             </div>
