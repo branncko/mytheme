@@ -17,7 +17,7 @@
 <body>
     <div class="bg-mt-dark">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-mt-gray mt-0">
+            <div class="row py-4 align-items-center justify-content-center text-white">
 
                 <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
                     <?php 
@@ -36,13 +36,35 @@
                 
               ?> </a>
 
+                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir Menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <?php
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+    <div class="col-12 col-md-8 col-lg-9 img-fluid">
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center bg-mt-1gray mb-1">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir Menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <?php
         wp_nav_menu( array(
             'theme_location'    => 'topo',
             'depth'             => 2,
@@ -54,22 +76,6 @@
             'walker'            => new WP_Bootstrap_Navwalker(),
         ) );
         ?>
-            </nav>
-        </div>
 
-
-
-
-
-        <div class="row py-4 align-items-center justify-content-center text-white">
-            <div class="col-8 col-md-4 col-lg-3 mb-4 mb-md-0">
-
-
-            </div>
-            <div class="col-12 col-md-8 col-lg-9 header-ad">
-                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
-            </div>
-        </div>
-
-
+        </nav>
     </div>

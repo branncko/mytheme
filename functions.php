@@ -78,10 +78,10 @@ register_sidebar(
     array(
         'name'          => 'Super Banner',
         'id'            => 'super-banner',
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
 
 ));
 
