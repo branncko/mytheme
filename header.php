@@ -32,32 +32,21 @@
                   echo '<h1 class="m-0">' . get_bloginfo('name') . '</h1>';
                   echo '<p class="m-0">' . get_bloginfo('description') . '</p>';  
                 }
-              
-                
-              ?> </a>
-
-                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
-
-
+                    ?>
+                </a>
+               
+                <div class="row header-ad m-2">
+                    <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+                </div>
 
             </div>
 
-
-
-
-
-
-
-
         </div>
 
-
     </div>
-    <div class="col-12 col-md-8 col-lg-9 img-fluid">
+    <div class="justify-content-right bg-mt-gray">
 
-
-
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-center bg-mt-1gray mb-1">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-right">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir Menu">

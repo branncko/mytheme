@@ -52,7 +52,7 @@
         <?php endif; ?>
         <?php wp_reset_query(); ?>
 
-        
+
 
 
         <div class="mt-3 mb-4">
@@ -91,9 +91,9 @@
 
         </div>
         <!-- Sidebar 2 -->
-        
 
-        
+
+
 
     </div>
 </div>
@@ -105,7 +105,8 @@
 
     <div class="container">
         <div class="row">
-            <div class="col col-md text-center img-fluid my-3">
+            <div class="row header-ad m-2">
+
                 <?php  dynamic_sidebar( 'Super Banner' );  ?>
             </div>
         </div>
