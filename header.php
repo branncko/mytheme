@@ -34,10 +34,13 @@
                 }
                     ?>
                 </a>
-               
-                <div class="row header-ad m-2">
-                    <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+
+
+                <div class="header-ad">
+                    <?php if ( dynamic_sidebar('Ads Topo') ) : else : endif; ?>
+
                 </div>
+                <!--header ad-->
 
             </div>
 
