@@ -19,7 +19,9 @@
         <div class="container">
             <div class="row py-4 align-items-center justify-content-center text-white">
 
-                <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
+            <div class="col-6 col-md-4">
+            
+            <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
                     <?php 
 
                 $lc_custom_logo = get_theme_mod('custom_logo');
@@ -34,8 +36,12 @@
                 }
                     ?>
                 </a>
+            
+            </div>
+
+                
                
-                <div class="row header-ad m-2">
+                <div class="row header-ad px-2 m-2">
                     <?php  dynamic_sidebar( 'Ads Topo' );  ?>
                 </div>
 
