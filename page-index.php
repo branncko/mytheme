@@ -30,7 +30,7 @@
                         while ( $down_query -> have_posts() ) : 
                         $down_query->the_post(); ?>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-3 col-sm-6">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3') ); ?> </a>
 
@@ -49,8 +49,7 @@
             </h5>
 
         </div>
-        <?php endif; ?>
-        <?php wp_reset_query(); ?>
+        
 
 
 
@@ -59,59 +58,16 @@
             <?php next_posts_link('Mais antigos'); ?>
             <?php previous_posts_link('Mais novos'); ?>
         </div>
-
-
-    </div>
-    <div class="row">
-
-        <div class="col-lg-8 col-12">
-            <h5 class="border-bottom  pb-2 mb-4"><i class="fas fa-newspaper"></i> Novidades</h5>
-
-            <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-            <h3 class="lead">Aqui teve alteração the_post</h3>
-
-            <!-- <?php get_template_part('content', get_post_format());?> -->
-
-            <?php endwhile; ?>
-            <?php else : ?>
-            <p class="lead">Nenhuma publicação encontrada! index</p>
-
             <?php endif; ?>
-
-            <?php wp_reset_query(); ?>
-
-            <div class="mt-3 mb-4">
-                <?php next_posts_link('Mais antigos'); ?>
-                <?php previous_posts_link('Mais novos'); ?>
-            </div>
-            <?php include('includes\teste.php'); ?>
-            <?php include('includes\depoimentos.php'); ?>
-
-
-        </div>
-        <!-- Sidebar 2 -->
-
-
-
+        <?php wp_reset_query(); ?>
 
     </div>
+    
 </div>
 <!-- caixas de Comentários  -->
 
 
 
-<div class="bg-mt-gray py-2 mt-5">
 
-    <div class="container">
-        <div class="row">
-            <div class="row header-ad m-2">
-
-                <?php  dynamic_sidebar( 'Super Banner' );  ?>
-            </div>
-        </div>
-    </div>
-
-</div>
 
 <?php get_footer(); ?>

@@ -1,4 +1,18 @@
  <!-- Rodapé -->
+ <div class="bg-mt-gray py-2 mt-5">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="header-ad px-2 m-2">
+
+            <?php  dynamic_sidebar( 'Super Banner' );  ?>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
  <div class="bg-mt-dark py-5 ">
      <div class="container">
          <div class="row">

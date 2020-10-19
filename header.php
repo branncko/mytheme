@@ -19,10 +19,10 @@
         <div class="container">
             <div class="row py-4 align-items-center justify-content-center text-white">
 
-            <div class="col-6 col-md-4">
-            
-            <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
-                    <?php 
+                <div class="col-6 col-md-4">
+
+                    <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
+                        <?php 
 
                 $lc_custom_logo = get_theme_mod('custom_logo');
                 $logo = wp_get_attachment_image_src($lc_custom_logo , 'full');
@@ -35,15 +35,16 @@
                   echo '<p class="m-0">' . get_bloginfo('description') . '</p>';  
                 }
                     ?>
-                </a>
-            
-            </div>
+                    </a>
 
-                
-               
-                <div class="row header-ad px-2 m-2">
-                    <?php  dynamic_sidebar( 'Ads Topo' );  ?>
                 </div>
+
+         
+                    <div class="row header-ad px-2 m-2">
+                        <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+                    </div>
+
+
 
             </div>
 

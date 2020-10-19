@@ -57,16 +57,5 @@
     </div>
 </div>
 
-<div class="bg-mt-gray py-2 mt-5">
-
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
-            </div>
-        </div>
-    </div>
-
-</div>
 
 <?php get_footer(); ?>
