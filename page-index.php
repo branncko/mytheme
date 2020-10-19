@@ -21,7 +21,7 @@
 
                     $down_args = array(
                     'post_type' => 'downloads', 
-                    'posts_per_page' => '-1'
+                    'posts_per_page' => '9'
 
                     );
                     $down_query = new WP_Query( $down_args );  ?>
@@ -30,9 +30,9 @@
                         while ( $down_query -> have_posts() ) : 
                         $down_query->the_post(); ?>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-4 col-sm-6 ">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3') ); ?> </a>
+                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?> </a>
 
             <!-- <h5>
                         <a href="<?php the_permalink(); ?>">

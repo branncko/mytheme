@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row py-4 align-items-center justify-content-center text-white">
 
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-3">
 
                     <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
                         <?php 

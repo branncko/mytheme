@@ -28,7 +28,7 @@ register_nav_menus(array(
 ));
 // Miniaturas
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 1080, 720, true); 
+set_post_thumbnail_size( 1000, 1000, false); 
 
 
 if (!function_exists('mytheme_image_sizes')) {
@@ -78,10 +78,10 @@ register_sidebar(
     array(
         'name'          => 'Super Banner',
         'id'            => 'super-banner',
-        'before_widget' => '<div>',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
+        'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 
 ));
 

@@ -18,7 +18,12 @@
 
 .header-ad {
   float: right;
-  width: 728px;
+  width: 780px;
+  max-width: 100%;
+}
+
+.footer-ad {
+  width: 780px;
   max-width: 100%;
 }
 

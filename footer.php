@@ -1,17 +1,14 @@
  <!-- Rodapé -->
  <div class="bg-mt-gray py-2 mt-5">
+     <div class="container">
+         <div class="row justify-content-center">
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="header-ad px-2 m-2">
-
-            <?php  dynamic_sidebar( 'Super Banner' );  ?>
-        </div>
-    </div>
-</div>
-
-</div>
-
+             <div class="footer-ad">
+                 <?php  dynamic_sidebar( 'Super Banner' );  ?>
+             </div>
+         </div>
+     </div>
+ </div>
 
  <div class="bg-mt-dark py-5 ">
      <div class="container">
@@ -62,13 +59,13 @@
          </div>
          <div class="row">
              <div class="col text-center text-white">
-                      <ul class="list-inline mb-0">
+                 <ul class="list-inline mb-0">
 
 
-                        <li class="list-inline-item mr-3">
-                            <i class="fab fa-whatsapp "></i>
-                            (88) 9 9956-7891
-                        </li>
+                     <li class="list-inline-item mr-3">
+                         <i class="fab fa-whatsapp "></i>
+                         (88) 9 9956-7891
+                     </li>
 
                      <li class="list-inline-item mr-3">
                          <i class="fas fa-inbox"></i>
@@ -84,6 +81,7 @@
 
      </div>
  </div>
+
  <?php wp_footer(); ?>
 
  <!-- Optional JavaScript -->
