@@ -1,10 +1,11 @@
 <?php get_header(); ?>
-
+<p>Single.php</p>
 <div class="container">
 
     <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
 
-    <?php get_template_part('content', get_post_format());?>
+    <?php the_title(); ?>
+    <?php the_content(); ?>
 
     <?php endwhile; ?>
 
