@@ -1,4 +1,4 @@
-<?php /* Template name: Página Inicial */  ?>
+<?php /* Template name: Página  Mega Inicial */  ?>
 
 <?php get_header();?>
 
