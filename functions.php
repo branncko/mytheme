@@ -112,3 +112,13 @@ register_sidebar(
 include_once get_template_directory() .  "/cpt/downloads.php";
 include_once get_template_directory() .  "/cpt/depoimentos.php";
 include_once get_template_directory() .  "/includes/cmb2/load.php";
+
+function search_filter($query) {
+    if ( !is_admin() && $query->is_main_query() ) {
+        if ($query->is_search) {
+            $query->set('post_type', array( 'post', 'downloads' ) );
+        }
+    }
+}
+
+add_action('pre_get_posts','search_filter');

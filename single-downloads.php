@@ -19,7 +19,7 @@
             <div class="well hidden-xs" id="sidebar">
                 <h4 class="p-1">Detalhes</h4>
 
-                <i class="fa fa-folder-open"></i> <?php the_category(', '); ?><br>
+                <i class="fa fa-folder-open"></i> <?php the_category(' - '); ?><br>
                 <!-- <i class="fa fa-comments" aria-hidden="true"></i>
                 <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
                 <i class="fa fa-eye" aria-hidden="true"></i>

@@ -2,7 +2,11 @@
 
 <?php get_header();?>
 
+<span class="card px-5 py-3 my-1 justify-content-center badge-primary">
+        <?php get_search_form(); ?>
+    </span>
 <div class="card border-0 text-white text-center">
+
     <img src="<?php the_field('cmb2_banner_imagem'); ?>" class="card-img banner-header" alt="imagem Banner ">
     <div class="card-img-overlay bg-banner-header p-0 m-0 row">
         <div class="col align-self-end">
@@ -16,6 +20,7 @@
 </div>
 
 <div class="container">
+
     <div class="row my-5 pt-2">
         <?php 
 

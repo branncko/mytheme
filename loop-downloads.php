@@ -1,91 +1,42 @@
-<?php
-$cols = 'col0|col1|col2|col3';
+div class="container">
+    <div class="row my-5 pt-2">
+        
 
-$cols = explode("|", $cols);
+        <?php if( have_posts() ) : 
+                        while (have_posts() ) : 
+                        the_post(); ?>
 
-foreach ($cols as $index => &$col){
-   $col = explode(",", $col);
-   $colheads = !isset($colheads[$index])?$col[0]:$colheads[$index];
-}; ?>
+        <div class="col-lg-4 col-sm-6 ">
+            <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('mytheme-paisagem', array('class' => 'img-fluid my-3 justify-content-center') ); ?> </a>
 
+             <h5> -->
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?></a>
+                    </h5>
+                    <p class="mb-0"><?php the_excerpt(); ?> </p> 
+        </div>
 
+        <?php endwhile; ?>
+        <?php else : ?>
+        <div class="col-lg-4 col-sm-6">
+            <h5>
+                Nenhum download cadastrado!
+            </h5>
 
-<!-- cabeçalho -->
-<div class="container">
-        <div class="row">
-        <table class="table table-hover align-items-center" id="example">
-            <thead>
-                <tr>
-                    <th scope="col" class="col-md-4">Título</th>
-                    <th scope="col">Data de publicação</th>
-                    <th scope="col">Pre-visualização</th>
-                    <th scope="col">Detalhes</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php 
-                                $args = array(  
-                                'post_type' => 'downloads',
-                                'post_status' => 'publish',
-                                'posts_per_page' => -1, 
-                                'orderby' => 'date', 
-                                'order' => 'DESC',
-                            );
-                        
-                            $loop = new WP_Query( $args ); 
-                                
-                            while ( $loop->have_posts() ) : $loop->the_post();?>
+        </div>
+        
 
 
 
-                <tr>
-                    <?php
-                        $tcols = $cols;
-                        array_shift($tcols);
-                        foreach ($cols as $colx => $cold){ ?>
 
-                    <td>
-                        <?php 
-                           
-                            foreach ($cold as $cx => $c){
-                                $cxc = ($cx > 0)?'|':'|';
-                                switch ($c) {
-                                    case 'col0':
-                                        echo '<strong>'; echo get_the_title() . '</strong> </br>'; 
-                                        echo get_the_excerpt( ) ;
-                                        
-                                        break;
-
-                                    case 'col1':
-                                        echo get_the_date();
-                                        break;  
-
-                                    case 'col2':
-                                        
-                                      echo the_post_thumbnail('thumbnail', array('class' => 'img-fluid my-3 justify-content-center') );
-                                        break;
-                                   
-                                                                            
-                                    case 'col3' :
-                                        echo "<a class=\"btn btn-primary\" href='".get_the_permalink()."' role=\"button\"> Visualizar </a>" ;  
-                                        break;
-
-                            }}
-                            
-                                        ?>
-
-
-                    </td>
-                    <?php } endwhile; ?>
-
-                </tr>
-
-            </tbody>
-
-        </table>
-
-
+        <div class="mt-3 mb-4">
+            <?php next_posts_link('Mais antigos'); ?>
+            <?php previous_posts_link('Mais novos'); ?>
+        </div>
+            <?php endif; ?>
+    
 
     </div>
+    
 </div>

@@ -38,6 +38,20 @@ function mt_cpt() {
 
     );
 
+    register_taxonomy( 
+		'down_categoria', 
+		array( 
+			'downloads' 
+		), 
+		array(
+			'hierarchical' => true,
+			'label' => __( 'Utilização' ),
+			'show_ui' => true,
+			'show_in_tag_cloud' => true,
+			'query_var' => true,
+			'rewrite' => array('slug' => 'down_categoria'),
+		)
+	);
     register_post_type('downloads', $args);
 } 
 
