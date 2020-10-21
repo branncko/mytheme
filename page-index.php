@@ -2,9 +2,6 @@
 
 <?php get_header();?>
 
-<span class="card px-5 py-3 my-1 justify-content-center badge-primary">
-        <?php get_search_form(); ?>
-    </span>
 <div class="card border-0 text-white text-center">
 
     <img src="<?php the_field('cmb2_banner_imagem'); ?>" class="card-img banner-header" alt="imagem Banner ">
@@ -20,13 +17,66 @@
 </div>
 
 <div class="container">
-
     <div class="row my-5 pt-2">
+        <?php 
+
+            $down_args = array(
+            'post_type' => 'downloads', 
+            'posts_per_page' => 3,
+            
+
+
+            );
+            $down_query = new WP_Query( $down_args );  ?>
+
+        <?php if( $down_query -> have_posts() ) : 
+                while ( $down_query -> have_posts() ) : 
+                $down_query->the_post(); ?>
+
+        <div class="col-lg-4 col-sm-6 ">
+            <a href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?>
+            </a>
+
+            <!-- <h5>
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?></a>
+            </h5>
+            <p class="mb-0"><?php the_excerpt(); ?> </p> -->
+        </div>
+
+        <?php endwhile; ?>
+        <?php else : ?>
+        <div class="col-lg-4 col-sm-6">
+            <h5>
+                Nenhum download cadastrado!
+            </h5>
+
+        </div>
+
+
+
+
+
+        <div class="mt-3 mb-4">
+            <?php next_posts_link('Mais antigos'); ?>
+            <?php previous_posts_link('Mais novos'); ?>
+        </div>
+        <?php endif; ?>
+        <?php wp_reset_query(); ?>
+
+        <div class="row header-ad px-2 m-2">
+                        <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+                    </div>
+
+
         <?php 
 
                     $down_args = array(
                     'post_type' => 'downloads', 
-                    'posts_per_page' => '9'
+                    'posts_per_page' => 6,
+                    'offset' => 4
+
 
                     );
                     $down_query = new WP_Query( $down_args );  ?>
@@ -37,7 +87,8 @@
 
         <div class="col-lg-4 col-sm-6 ">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?> </a>
+                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?>
+            </a>
 
             <!-- <h5>
                         <a href="<?php the_permalink(); ?>">
@@ -54,7 +105,7 @@
             </h5>
 
         </div>
-        
+
 
 
 
@@ -63,11 +114,11 @@
             <?php next_posts_link('Mais antigos'); ?>
             <?php previous_posts_link('Mais novos'); ?>
         </div>
-            <?php endif; ?>
+        <?php endif; ?>
         <?php wp_reset_query(); ?>
 
     </div>
-    
+
 </div>
 <!-- caixas de Comentários  -->
 

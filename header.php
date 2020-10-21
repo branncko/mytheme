@@ -16,10 +16,10 @@
 
 <body>
     <div class="bg-mt-dark">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row py-4 align-items-center justify-content-center text-white">
 
-                <div class="col-6 col-md-3">
+                <div class="col-lg col-lg-2 text-center">
 
                     <a class="navbar-brand" href="<?php bloginfo('url'); ?>/">
                         <?php 
@@ -39,10 +39,15 @@
 
                 </div>
 
-         
-                    <div class="row header-ad px-2 m-2">
-                        <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+                <div
+                    class="search search-filter col pd-none-i mg-left-lv2-i card px-5 py-3 m-1 justify-content-center badge-primary">
+                    <div class="col-lg col-md col-lg-12">
+                        <?php get_search_form(); ?>
                     </div>
+                </div>
+
+
+
 
 
 
