@@ -21,7 +21,7 @@
         <?php else : ?>
         <div class="col-lg-4 col-sm-6">
             <h5>
-                Nenhum download cadastrado!
+                Nenhum download cadastrado nesse loop!
             </h5>
 
         </div>
