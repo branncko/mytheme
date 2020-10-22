@@ -1,4 +1,4 @@
-div class="container">
+<div class="container">
     <div class="row my-5 pt-2">
         
 
@@ -10,7 +10,7 @@ div class="container">
             <a href="<?php the_permalink(); ?>">
                 <?php the_post_thumbnail('mytheme-paisagem', array('class' => 'img-fluid my-3 justify-content-center') ); ?> </a>
 
-             <h5> -->
+             <h5>
                         <a href="<?php the_permalink(); ?>">
                             <?php the_title(); ?></a>
                     </h5>

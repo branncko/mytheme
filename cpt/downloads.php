@@ -21,7 +21,7 @@ function mt_cpt() {
         'description'         => __('Disponibilização de arquivos grátis','mytheme'),
         'labels'              => $labels,
         'supports'            => array('title',  'excerpt','thumbnail'),
-        'taxonomies'    => array('category', 'tags'),
+        'taxonomies'    => array('utilizacao','tags'),
         'hierachical'         => false,
         'public'              => true,
         'show_ui'             => true,
@@ -38,23 +38,48 @@ function mt_cpt() {
 
     );
 
-    register_taxonomy( 
-		'down_categoria', 
-		array( 
-			'downloads' 
-		), 
-		array(
-			'hierarchical' => true,
-			'label' => __( 'Utilização' ),
-			'show_ui' => true,
-			'show_in_tag_cloud' => true,
-			'query_var' => true,
-			'rewrite' => array('slug' => 'down_categoria'),
-		)
-	);
     register_post_type('downloads', $args);
-} 
+
+    
+
+	
+}
 
 add_action('init', 'mt_cpt', 0);
+
+function cptui_register_my_taxes_utilizacao() {
+
+	/**
+	 * Taxonomy: Utilizações.
+	 */
+
+	$labels = [
+		"name" => __( "Utilizações", "custom-post-type-ui" ),
+		"singular_name" => __( "Utilização", "custom-post-type-ui" ),
+	];
+
+	$args = [
+		"label" => __( "Utilizações", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'utilizacao', 'with_front' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "utilizacao",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+		];
+	register_taxonomy( "utilizacao", [ "downloads" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_utilizacao' );
+
+
+
 
 ?>

@@ -8,9 +8,9 @@
 
             <h1 class="mt-3 mb-2"><?php the_title(); ?></h1>
 
-            <?php the_post_thumbnail('mytheme-content', array('class' => 'center img-fluid mb-3') ); ?>
+            <!-- <?php the_post_thumbnail('mytheme-content', array('class' => 'center img-fluid mb-3') ); ?> -->
 
-            <!-- <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa" class="img-fluid mb-3 p-2 card"> -->
+            <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa" class="rounded img-fluid mb-3 p-2 card alert-primary">
 
             <h5 class="p-3"><?php the_excerpt();?></h5>
 

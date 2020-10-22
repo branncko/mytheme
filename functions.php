@@ -122,3 +122,14 @@ function search_filter($query) {
 }
 
 add_action('pre_get_posts','search_filter');
+
+function rtcadmin_show_cpt_archives( $query ) {
+    if ( ! empty( $query->query_vars['suppress_filters'] ) ) return;
+    if ( ! is_category() || ! is_tag() ) return;
+    if ( ! $query->is_main_query() ) return;
+
+    $post_types = $query->get( 'downloads' );
+    $query->set( 'post_type', array_merge( $post_types, 'downloads' ) );
+}
+
+add_action( 'pre_get_posts', 'rtcadmin_show_cpt_archives' );
