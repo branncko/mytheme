@@ -44,27 +44,27 @@ function mt_cpt() {
 /**
          * Modalidade para os eventos
     **/     
-    register_taxonomy( 'modalidade', array( 'downloads' ), array(
+    register_taxonomy( 'tipo', array( 'downloads' ), array(
         'hierarchical' => true,
-        'label' => __( 'Modalidade' ),
+        'label' => __( 'Tipo' ),
         'labels' => array( // Labels customizadas
-        'name' => _x( 'Modalidade', 'taxonomy general name' ),
-        'singular_name' => _x( 'Modalidade', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Pesquisar Modalidade' ),
-        'all_items' => __( 'Todas Modalidades' ),
-        'parent_item' => __( 'Categoria Modalidade' ),
-        'parent_item_colon' => __( 'Categoria Modalidade:' ),
-        'edit_item' => __( 'Editar Modalidade' ),
-        'update_item' => __( 'Atualizar Modalidade' ),
-        'add_new_item' => __( 'Adicionar Modalidade' ),
-        'new_item_name' => __( 'Nome Nova Modalidade' ),
-        'menu_name' => __( 'Modalidades' ),
+        'name' => _x( 'Tipo', 'taxonomy general name' ),
+        'singular_name' => _x( 'Tipo', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Pesquisar Tipo' ),
+        'all_items' => __( 'Todas Tipos' ),
+        'parent_item' => __( 'Categoria Tipo' ),
+        'parent_item_colon' => __( 'Categoria Tipo:' ),
+        'edit_item' => __( 'Editar Tipo' ),
+        'update_item' => __( 'Atualizar Tipo' ),
+        'add_new_item' => __( 'Adicionar Tipo' ),
+        'new_item_name' => __( 'Nome Nova Tipo' ),
+        'menu_name' => __( 'Tipos' ),
         ),
         'show_ui' => true,
         'show_in_tag_cloud' => true,
         'query_var' => true,
         'rewrite' => array(
-            'slug' => 'modalidade',
+            'slug' => 'tipo',
             'with_front' => true
         ),
     )

@@ -23,6 +23,8 @@
                 <h4 class="pl-1 ">Detalhes</h4>
                 
                 <span class="p-2 card"> <?php the_excerpt();?></span>
+
+                <?php get_the_terms($post->ID, 'tipo'); ?>
                 
                 
 
