@@ -38,6 +38,7 @@ if (!function_exists('mytheme_image_sizes')) {
 		add_image_size('mytheme-large', 678, 509, true);
 		add_image_size('mytheme-medium', 326, 245, true);
 		add_image_size('mytheme-small', 800, 600, true);
+		add_image_size('capa', 800, 600, false);
 	}
 }
 add_action('after_setup_theme', 'mytheme_image_sizes');

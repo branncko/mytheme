@@ -8,7 +8,7 @@
 
             <h1 class="mt-3 mb-2"><?php the_title(); ?></h1>
 
-            <?php the_post_thumbnail('mytheme-content', array('class' => 'center img-fluid mb-3') ); ?>
+            <?php the_post_thumbnail('capa', array('class' => 'center img-fluid mb-3') ); ?>
 
             <!-- <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa" class="img-fluid mb-3 p-2 card"> -->
 
@@ -31,7 +31,7 @@
             </div>
 
             <p><a href="<?php the_field('cmb2_down_link'); ?>" target="_blank"
-                    class="btn btn-lg btn-lc-orange mb-3 mt-3">Baixar</a>
+                    class="btn btn-lg btn-mt-orange mb-3 mt-3">Baixar</a>
             </p>
 
             <div class="mt-3 mb-4">

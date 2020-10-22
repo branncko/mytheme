@@ -32,7 +32,7 @@
 
         <div class="col-lg-4 col-sm-6">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3') ); ?> </a>
+                <?php the_post_thumbnail('capa', array('class' => 'img-fluid my-3') ); ?> </a>
 
             <!-- <h5>
                         <a href="<?php the_permalink(); ?>">
