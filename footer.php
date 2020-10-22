@@ -13,7 +13,7 @@
                     $logo = wp_get_attachment_image_src($lc_custom_logo , 'full');
 
                     if(has_custom_logo()) {
-                      echo '<img src="' . esc_url($logo[0]) . '" class="img-fluid my-2" alt="Logotipo IMGfree">';
+                      echo '<img src="' . esc_url($logo[0]) . '" class="img-fluid my-3" alt="Logotipo IMGfree">';
                     }
                     else {
                       echo '<h1 class="m-0">' . get_bloginfo('name') . '</h1>';

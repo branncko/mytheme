@@ -37,5 +37,9 @@ $enable-rounded: false;
    height: 500px;
    object-fit: cover;
 }
-
+.header-ad {
+   float: right;
+   width: 728px;
+   max-width: 100%;
+}
 @import"../node_modules/bootstrap/scss/bootstrap"; 
