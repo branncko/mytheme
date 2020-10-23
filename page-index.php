@@ -33,7 +33,7 @@
 
             <div class="col-lg-3 col-sm-6 ">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('medium', array('class' => 'rounded img-thumbnail my-3 justify-content-center') ); ?>
+                    <?php the_post_thumbnail('medium', array('class' => 'rounded img-fluid my-3 justify-content-center') ); ?>
                 </a>
 
             </div>
@@ -70,8 +70,8 @@
 
 <div class="card img-fluid border-0 text-white text-center">
 
-    <div class="container mt-3">
-        <div class="row bg-dark">
+    <div class="container-fluid mt-3 clearfix">
+        <div class="row bg-mt-orange-light">
 
             <div class="col header-ad center p-2">
                 <?php  dynamic_sidebar( 'Ads Topo' );  ?>
