@@ -2,7 +2,6 @@
  <div class="bg-mt-gray py-2 mt-5">
      <div class="container">
          <div class="row justify-content-center">
-
              <div class="footer-ad">
                  <?php  dynamic_sidebar( 'Super Banner' );  ?>
              </div>

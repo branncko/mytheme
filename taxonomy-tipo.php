@@ -1,12 +1,12 @@
-<!-- Adiciona o cabeçalho (header.php) -->
 <?php get_header(); ?>
+
 <div class="bg-gray">
 
 
     <div class="container">
         <div class="row py-4">
             <div class="col">
-                <div class="ronded card">
+                <div class="alert alert-secondary p-4">
 
                     <?php
 						// Get all the categories
@@ -31,17 +31,30 @@
 							);
 						?>
 
-                    <ul class="alert">
-                        <h3><?php echo $category->name; ?></h3>
 
-                        <?php while ($services->have_posts()) : $services->the_post(); ?>
-                        <li>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <ul class="list-group">
+                        <li class="list-group-item mb-2">
+                            <h3><?php echo $category->name; ?></h3>
+
+                            <?php while ($services->have_posts()) : $services->the_post(); ?>
+                            <p>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+								
+                            </p>
+                            <?php endwhile; ?>
+
+
                         </li>
-                        <?php endwhile; ?>
 
 
-                        <?php
+                    </ul>
+
+
+
+
+
+                    <?php
 							// Reset things, for good measure
 							$services = null;
 							wp_reset_postdata();
@@ -49,7 +62,7 @@
 						// end the loop
 						endforeach; ?>
 
-                    </ul>
+
                 </div>
             </div>
         </div>

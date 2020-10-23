@@ -41,7 +41,7 @@ function cmb2_fields_home() {
         'query_args' => array(
             'type' => array ('application/pdf','image/gif','image/jpeg','image/png' )
         ),
-        'preview_size' => 'large', // Image size to use when previewing in the admin.
+        'preview_size' => 'medium', // Image size to use when previewing in the admin.
     ) );
 
     $cmb->add_field([

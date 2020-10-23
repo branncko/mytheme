@@ -4,8 +4,48 @@
         <div class="col card alert-secondary mb-3">
 
 
+
+        <?php
+						// Get all the categories
+						$categories = get_terms( 'tipo' );
+
+						// Loop through all the returned terms
+						foreach ( $categories as $category ):
+
+							// set up a new query for each category, pulling in related posts.
+							$services = new WP_Query(
+								array(
+									'post_type' => 'downloads',
+									'showposts' => -1,
+									'tax_query' => array(
+										array(
+											'taxonomy'  => 'tipo',
+											'terms'     => array( $category->slug ),
+											'field'     => 'slug'
+										)
+									)
+								)
+							);
+						?>
+
+                   
+                        <h3><?php echo $category->name; ?></h3>
+
+                        <?php while ($services->have_posts()) : $services->the_post(); ?>
+                        
+                        <?php endwhile; ?>
+
+
+                        <?php
+							// Reset things, for good measure
+							$services = null;
+							wp_reset_postdata();
+
+						// end the loop
+						endforeach; ?>
+
             
-            <h2 class="pl-5 my-2"> <i class="fa fa-folder-open"></i>  <?php single_cat_title(); ?> </h2>
+            <h2 class="pl-5 my-2"> <i class="fa fa-folder-open"></i>  <?php echo $category->name; ?> </h2>
 
             <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
 

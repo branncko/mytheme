@@ -8,10 +8,15 @@
 
             <h1 class="mt-3 mb-4"><?php the_title(); ?></h1>
 
-            <!-- <?php the_post_thumbnail('mytheme-content', array('class' => 'center img-fluid mb-3') ); ?> -->
+            <?php the_post_thumbnail('mytheme-content', array('class' => 'rounded card alert-primary center img-fluid mb-3') ); ?>
 
-            <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa"
-                class="rounded img-fluid mb-3 p-2 card alert-primary">
+            <!-- <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa"
+                class="rounded img-fluid mb-3 p-2 card alert-primary"> -->
+            
+           
+            <!-- <img src="<?php wp_get_attachment_image ( the_field('cmb2_down_imagem'), 'mytheme-content' ); ?>" alt="Aqui" class="rounded mb-3 p-2 card alert-primary"> -->
+           
+
 
              
             <div class="well hidden-xs">
@@ -28,7 +33,6 @@
                 <!-- <i class="fa fa-comments" aria-hidden="true"></i>
                 <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
                 <i class="fa fa-eye" aria-hidden="true"></i>
-
                 <i class="fa fa-clock-o"></i> Publicado em
                 <?php the_date('d/m/Y \|\ H:i:s'); ?> <br>
                 <i class="fas fa-edit" aria-hidden="true"></i> Alterado em

@@ -2,128 +2,136 @@
 
 <?php get_header();?>
 
-<div class="card border-0 text-white text-center">
+<div class="card img-fluid border-0 text-white text-center bg-dark">
 
-    <img src="<?php the_field('cmb2_banner_imagem'); ?>" class="card-img banner-header" alt="imagem Banner ">
-    <div class="card-img-overlay bg-banner-header p-0 m-0 row">
-        <div class="col align-self-end">
-            <p class="mb-0 lead"><?php the_field('cmb2_banner_subtitulo'); ?></p>
-            <h1 class="mb-3"><?php the_field('cmb2_banner_titulo'); ?></h1>
-            <p><a href="<?php the_field('cmb2_banner_link'); ?>" class="btn btn-lg btn-lc-orange mb-3">Saiba mais</a>
-            </p>
-        </div>
+
+
+    <div class="center p-2">
+        <?php  dynamic_sidebar( 'Ads Topo' );  ?>
     </div>
 
-</div>
 
-<div class="container">
-    <div class="row my-5 pt-2">
-        <?php 
+</div>
+<!-- Bloco 01 -->
+<div class="card img-fluid border-0 text-white text-center">
+    <div class="container">
+        <div class="row my-2 pt-2">
+            <?php 
 
             $down_args = array(
             'post_type' => 'downloads', 
-            'posts_per_page' => 3,
+            'posts_per_page' => 4,
             
 
 
             );
             $down_query = new WP_Query( $down_args );  ?>
 
-        <?php if( $down_query -> have_posts() ) : 
+            <?php if( $down_query -> have_posts() ) : 
                 while ( $down_query -> have_posts() ) : 
                 $down_query->the_post(); ?>
 
-        <div class="col-lg-4 col-sm-6 ">
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?>
-            </a>
-
-            <!-- <h5>
+            <div class="col-lg-3 col-sm-6 ">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_title(); ?></a>
-            </h5>
-            <p class="mb-0"><?php the_excerpt(); ?> </p> -->
-        </div>
+                    <?php the_post_thumbnail('medium', array('class' => 'rounded img-thumbnail my-3 justify-content-center') ); ?>
+                </a>
 
-        <?php endwhile; ?>
-        <?php else : ?>
-        <div class="col-lg-4 col-sm-6">
-            <h5>
-                Nenhum download cadastrado!
-            </h5>
+            </div>
 
-        </div>
+            <?php endwhile; ?>
+            <?php else : ?>
+            <div class="col-lg-4 col-sm-6">
+                <h5>
+                    Nenhum download cadastrado!
+                </h5>
 
 
 
 
 
-        <div class="mt-3 mb-4">
+                <!-- <div class="mt-3 mb-4">
             <?php next_posts_link('Mais antigos'); ?>
             <?php previous_posts_link('Mais novos'); ?>
+                </div> -->
+                <?php endif; ?>
+                <?php wp_reset_query(); ?>
+
+            </div>
         </div>
-        <?php endif; ?>
-        <?php wp_reset_query(); ?>
-
-        <div class="row text-center header-ad px-2 m-2">
-                        <?php  dynamic_sidebar( 'Ads Topo' );  ?>
-                    </div>
+    </div>
 
 
-        <?php 
+</div>
+
+
+
+
+<!-- Banner do Centro -->
+
+<div class="card img-fluid border-0 text-white text-center">
+
+    <div class="container mt-3">
+        <div class="row bg-dark">
+
+            <div class="col header-ad center p-2">
+                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+
+        <div class="row my-2 pt-2">
+
+            <!-- Bloco 02 -->
+
+            <?php 
 
                     $down_args = array(
                     'post_type' => 'downloads', 
-                    'posts_per_page' => 6,
-                    'offset' => 4
+                    'posts_per_page' => 8,
+                    'offset' => 5
 
 
                     );
                     $down_query = new WP_Query( $down_args );  ?>
 
-        <?php if( $down_query -> have_posts() ) : 
+            <?php if( $down_query -> have_posts() ) : 
                         while ( $down_query -> have_posts() ) : 
                         $down_query->the_post(); ?>
 
-        <div class="col-lg-4 col-sm-6 ">
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?>
-            </a>
+            <div class="col-lg-3 col-sm-6 ">
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('medium', array('class' => 'img-thumbnail my-3 justify-content-center') ); ?>
+                </a>
 
-            <!-- <h5>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_title(); ?></a>
-                    </h5>
-                    <p class="mb-0"><?php the_excerpt(); ?> </p> -->
+            </div>
+
+            <?php endwhile; ?>
+            <?php else : ?>
+            <div class="col-lg-3 col-sm-6">
+                <h5>
+                    Nenhum download cadastrado!
+                </h5>
+
+            </div>
+
+            <?php endif; ?>
+            <?php wp_reset_query(); ?>
+
         </div>
-
-        <?php endwhile; ?>
-        <?php else : ?>
-        <div class="col-lg-4 col-sm-6">
-            <h5>
-                Nenhum download cadastrado!
-            </h5>
-
-        </div>
-
-
-
-
-
-        <div class="mt-3 mb-4">
-            <?php next_posts_link('Mais antigos'); ?>
-            <?php previous_posts_link('Mais novos'); ?>
-        </div>
-        <?php endif; ?>
-        <?php wp_reset_query(); ?>
 
     </div>
 
+
+
+
 </div>
-<!-- caixas de Comentários  -->
-
-
-
-
 
 <?php get_footer(); ?>
