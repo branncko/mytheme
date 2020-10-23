@@ -65,7 +65,7 @@
         <?php endif; ?>
         <?php wp_reset_query(); ?>
 
-        <div class="row header-ad px-2 m-2">
+        <div class="row text-center header-ad px-2 m-2">
                         <?php  dynamic_sidebar( 'Ads Topo' );  ?>
                     </div>
 

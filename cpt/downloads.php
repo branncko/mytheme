@@ -51,7 +51,7 @@ function mt_cpt() {
         'name' => _x( 'Tipo', 'taxonomy general name' ),
         'singular_name' => _x( 'Tipo', 'taxonomy singular name' ),
         'search_items' =>  __( 'Pesquisar Tipo' ),
-        'all_items' => __( 'Todas Tipos' ),
+        'all_items' => __( 'Todos Tipos' ),
         'parent_item' => __( 'Categoria Tipo' ),
         'parent_item_colon' => __( 'Categoria Tipo:' ),
         'edit_item' => __( 'Editar Tipo' ),

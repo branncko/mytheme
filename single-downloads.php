@@ -13,22 +13,18 @@
             <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa"
                 class="rounded img-fluid mb-3 p-2 card alert-primary">
 
-            
-
-
-
+             
             <div class="well hidden-xs">
 
+            
             
                 <h4 class="pl-1 ">Detalhes</h4>
                 
                 <span class="p-2 card"> <?php the_excerpt();?></span>
 
-                <?php get_the_terms($post->ID, 'tipo'); ?>
-                
-                
+                <!-- <?php the_category('  |  '); ?> -->
 
-                <i class="fa fa-folder-open"></i> <?php the_category('  |  '); ?><br>
+                <i class="fa fa-folder-open"></i> <?php  the_terms($post->ID , 'tipo'); ?> <br>
                 <!-- <i class="fa fa-comments" aria-hidden="true"></i>
                 <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -39,8 +35,9 @@
                 <?php the_modified_date('d/m/Y \|\ H:i:s'); ?><br>
             </div>
 
-            <p><a href="<?php the_field('cmb2_down_link'); ?>" target="_blank"
-                    class="btn btn-outline-primary btn-lg mb-3 mt-3">Baixar</a>
+            <p>
+            
+            <a class="btn btn-outline-primary btn-lg mb-3 mt-3" href="<?php the_field('cmb2_down_link'); ?>" target="_blank" >Baixar</a>
             </p>
 
             <div class="mt-3 mb-4">
