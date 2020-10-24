@@ -12,12 +12,13 @@
             <?php the_content(); ?>
 
 
-            <?php endwhile; ?>
 
-            <?php else : get_404_template(); endif; ?>
 
         </div>
         saida
+        <?php endwhile; ?>
+
+        <?php else : get_404_template(); endif; ?>
 
 
     </div>
