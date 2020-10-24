@@ -16,7 +16,7 @@ foreach ($cols as $index => &$col){
         <table class="col-md table table-hover align-items-center">
             <thead>
                 <tr>
-                    <th scope="col">Título</th>
+                    <th scope="col" class="col-sm col-md">Título</th>
                     <th scope="col">Pre-visualização</th>
                     <th scope="col">Detalhes</th>
                 </tr>
@@ -52,7 +52,7 @@ foreach ($cols as $index => &$col){
                                 switch ($c) {
                                     case 'col0':
                                         echo '<strong>'; echo get_the_title() . '</strong> </br>'; 
-                                        echo get_the_excerpt( ) ;
+                                        echo get_the_excerpt( ) . '</br>' ;
                                          echo get_the_date();
                                         break;
                                
