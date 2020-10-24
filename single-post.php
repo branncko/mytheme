@@ -28,10 +28,7 @@
 
 
 
-            <div class="mt-3 mb-4">
-                <?php next_posts_link('Mais antigos'); ?>
-                <?php previous_posts_link('Mais novos'); ?>
-            </div>
+            
 
             <!-- cmb2_down_imagem -->
 
@@ -39,6 +36,11 @@
             <?php endwhile; ?>
 
             <?php else : echo 'Nenhum arquivo'; endif; ?>
+
+            <div class="mt-3 mb-4">
+                <?php next_posts_link('Mais antigos'); ?>
+                <?php previous_posts_link('Mais novos'); ?>
+            </div>
 
 
 

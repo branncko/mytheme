@@ -29,7 +29,7 @@
 
                 <!-- <?php the_category('  |  '); ?> -->
 
-                <i class="fa fa-folder-open"></i> <?php  the_terms($post->ID , 'tipo'); ?> <br>
+                <i class="fa fa-folder-open"></i> <?php  the_terms($post->ID , 'tipo', '', ' | ' ); ?> <br>
                 <!-- <i class="fa fa-comments" aria-hidden="true"></i>
                 <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
                 <i class="fa fa-eye" aria-hidden="true"></i>
