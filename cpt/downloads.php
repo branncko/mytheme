@@ -34,6 +34,7 @@ function mt_cpt() {
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => true,
+        'taxonomies' => array('post_tag', 'tipo'),
         'publicy_queryable'   => true,
         'capability_type'     => 'post'  
 
@@ -57,7 +58,7 @@ function mt_cpt() {
         'edit_item' => __( 'Editar Tipo' ),
         'update_item' => __( 'Atualizar Tipo' ),
         'add_new_item' => __( 'Adicionar Tipo' ),
-        'new_item_name' => __( 'Nome Nova Tipo' ),
+        'new_item_name' => __( 'Nome Novo Tipo de arquivo' ),
         'menu_name' => __( 'Tipos' ),
         ),
         'show_ui' => true,
@@ -70,7 +71,9 @@ function mt_cpt() {
     )
     );
 
-register_post_type('downloads', $args);
+    register_post_type('downloads', $args);
     flush_rewrite_rules();
 	
-}?>
+}
+
+?>
