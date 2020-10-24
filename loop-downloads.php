@@ -7,6 +7,7 @@
                 the_post(); ?>
 
             <div class="col-lg-4 col-sm-6 ">
+                <p>loop downloads</p>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('mytheme-content', array('class' => 'img-fluid my-3 justify-content-center') ); ?>
                 </a>
