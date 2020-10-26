@@ -1,79 +1,67 @@
+<!-- Baseado no licitações -->
+
 <?php
-add_action('init', 'mt_cpt');
+// Custom post
+function registra_downloads() {
+	$labels = array(
+		'name'               => 'Downloads',
+		'singular_name'      => 'Download',
+		'menu_name'          => 'Downloads ',
+		'name_admin_bar'     => 'Downloads',
+		'add_new'            => 'Novo',
+		'add_new_item'       => 'Novo Arquivo para baixar',
+		'new_item'           => 'Novo',
+		'edit_item'          => 'Editar ',
+		'view_item'          => 'Visualizar',
+		'all_items'          => 'Downloads',
+		'search_items'       => 'Encontrar',
+		'parent_item_colon'  => 'Pais:',
+		'not_found'          => 'Nada encontrado.',
+		'not_found_in_trash' => 'Nada encontrado.',
+	);
 
-function mt_cpt() {
-// Informar os textos da interface
-    $labels = array (
-        'name'                  => _x('Downloads' , 'Downloads dos clientes', 'mytheme'),
-        'singular_name'         => _x('Download', 'Download do cliente', 'nytheme'),
-        'menu_name'             => __('Downloads', 'mytheme'),
-        'all_items'             => __('Todos os arquivos disponíveis', 'mytheme'),
-        'view_item'             => __('Ver download', 'mytheme'),
-        'add_new_item'          => __('Adicionar novo download', 'mytheme'),
-        'add_new'               => __('Adicionar novo','mytheme'),
-        'edit_item'             => __('Editar download', 'mytheme'),
-        'update_item'           => __('Atualizar download', 'mytheme'),
-        'search_items'          => __('Buscar download', 'mytheme'),
-        'not_found'             => __('Não encontrado', 'mytheme'),
-        'not_found_in_trash'    => __('Não encontrado no lixo', 'mytheme'),
-    );
-
-    $args = array (
-        'label'               => __('downloads','mytheme'),
-        'description'         => __('Disponibilização de arquivos grátis','mytheme'),
-        'labels'              => $labels,
-        'supports'            => array('title',  'excerpt','thumbnail'),
-        'hierachical'         => false,
-        'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
-        'menu_position'       => 6,
-        'menu_icon'           => 'dashicons-admin-links',
-        'can_export'          => true,
-        'has_archive'         => true,
-        'exclude_from_search' => true,
-        'taxonomies' => array('post_tag', 'tipo'),
-        'publicy_queryable'   => true,
-        'capability_type'     => 'post'  
-
-    );
-
+	$args = array(
+		'menu_icon'		=> 'dashicons-media-document',
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => true,
+		'menu_position'      => 11,
+		'rewrite' => array('slug' => 'downloads', 'with_front' => true),
+		'can_export' => true,
+		'taxonomies' => array('post_tag', 'downloads_tipo'),
+		'publicly_queryable' => true,
+		'supports' => array('title',  'excerpt','thumbnail'),
+	);
+	
+	// Registra o custom post
+	register_post_type( 'downloads', $args );
+	
+	// Registra a categoria personalizada
+	register_taxonomy( 
+		'downloads_tipo', 
+		array( 
+			'downloads' 
+		), 
+		array(
+			'hierarchical' => true,
+			'label' => __( 'Utilização' ),
+			'show_ui' => true,
+			'show_in_tag_cloud' => true,
+			'query_var' => true,
+			'rewrite' => array('slug' => 'downloads_tipo'),
+		)
+	);
 
 
-/**
-         * Modalidade para os eventos
-    **/     
-    register_taxonomy( 'tipo', array( 'downloads' ), array(
-        'hierarchical' => true,
-        'label' => __( 'Tipo' ),
-        'labels' => array( // Labels customizadas
-        'name' => _x( 'Tipo', 'taxonomy general name' ),
-        'singular_name' => _x( 'Tipo', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Pesquisar Tipo' ),
-        'all_items' => __( 'Todos Tipos' ),
-        'parent_item' => __( 'Categoria Tipo' ),
-        'parent_item_colon' => __( 'Categoria Tipo:' ),
-        'edit_item' => __( 'Editar Tipo' ),
-        'update_item' => __( 'Atualizar Tipo' ),
-        'add_new_item' => __( 'Adicionar Tipo' ),
-        'new_item_name' => __( 'Nome Novo Tipo de arquivo' ),
-        'menu_name' => __( 'Tipos' ),
-        ),
-        'show_ui' => true,
-        'show_in_tag_cloud' => true,
-        'query_var' => true,
-        'rewrite' => array(
-            'slug' => 'tipo',
-            'with_front' => true
-        ),
-    )
-    );
-
-    register_post_type('downloads', $args);
-    flush_rewrite_rules();
 	
 }
+add_action( 'init', 'registra_downloads' );
 
+// Adiciona o custom posts na query principal
 ?>

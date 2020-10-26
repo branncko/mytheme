@@ -24,17 +24,8 @@ foreach ($cols as $index => &$col){
 
             <tbody>
                 <?php 
-                                $args = array(  
-                                'post_type' => 'downloads',
-                                'post_status' => 'publish',
-                                'posts_per_page' => 5, 
-                                'orderby' => 'date', 
-                                'order' => 'DESC',
-                            );
-                        
-                            $loop = new WP_Query( $args ); 
-                                
-                            while ( $loop->have_posts() ) : $loop->the_post();?>
+
+                            while ( have_posts() ) : the_post();?>
 
 
 
@@ -63,7 +54,10 @@ foreach ($cols as $index => &$col){
                                    
                                                                             
                                     case 'col2' :
-                                        echo "<a class=\"btn btn-primary align-items-center\" href='".get_the_permalink()."' role=\"button\"> Visualizar </a>" ;  
+
+                                        echo "<a class=\"btn btn-primary\" href='".get_the_permalink()."' role=\"button\"> Visualizar </a>" ;  
+                                        break;
+
                                         break;
 
                             }}
