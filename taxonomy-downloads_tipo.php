@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container">
+<div class="container-fluid">
     <div class="row p-4 mt-1">
         <div class="col card alert-secondary mb-3">
 
@@ -21,9 +21,7 @@
 
         </div>
 
-       <?php get_sidebar();?>
-
-
+      
     </div>
 
 

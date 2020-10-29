@@ -1,5 +1,3 @@
-<!-- Baseado no licitações -->
-
 <?php
 // Custom post
 function registra_downloads() {
