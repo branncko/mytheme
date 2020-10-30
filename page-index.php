@@ -2,18 +2,18 @@
 
 <?php get_header();?>
 
-<div class="card img-fluid border-0 text-white text-center bg-dark">
-
-
-
-    <div class="center p-2">
-        <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+<section id="anuncios_01">
+    <div class="row text-white text-center bg-dark">
+        <div class="col-md p-2 header-ad img-fluid">
+            <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+        </div>
     </div>
+</section>
 
 
-</div>
 <!-- Bloco 01 -->
-<div class="card img-fluid border-0 text-white text-center">
+<section class="card img-fluid border-0 text-white text-center">
+
     <div class="container">
         <div class="row my-2 pt-2">
             <?php 
@@ -45,14 +45,6 @@
                     Nenhum download cadastrado!
                 </h5>
 
-
-
-
-
-                <!-- <div class="mt-3 mb-4">
-            <?php next_posts_link('Mais antigos'); ?>
-            <?php previous_posts_link('Mais novos'); ?>
-                </div> -->
                 <?php endif; ?>
                 <?php wp_reset_query(); ?>
 
@@ -61,8 +53,7 @@
     </div>
 
 
-</div>
-
+</section>
 
 
 
