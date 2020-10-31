@@ -1,10 +1,9 @@
 <?php get_header ( ); ?>
-<div class="container">
-    <div class="row bg-gray"> 
-        <div class="col-md align-content-center">
+<div class="container-fluid">
+    <div class="row"> 
             <h1>Arquivos </h1>
             <?php get_template_part('loop', 'downloads'); ?>
-        </div>
+        
         
     </div>
 
