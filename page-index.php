@@ -2,13 +2,13 @@
 
 <?php get_header();?>
 
-<section id="anuncios_01">
+<!-- <section id="anuncios_01">
     <div class="row text-white text-center bg-dark">
         <div class="col-md p-2 header-ad img-fluid">
             <?php  dynamic_sidebar( 'Ads Topo' );  ?>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <!-- Bloco 01 -->
