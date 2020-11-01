@@ -15,7 +15,7 @@
 <section class="card img-fluid border-0 text-white ">
 
     <div class="container-fluid">
-        <div class="row my-2 pt-2">
+        <div class="row my-2 pt-2 ">
             <?php 
 
             $down_args = array(
@@ -31,9 +31,9 @@
                 while ( $down_query -> have_posts() ) : 
                 $down_query->the_post(); ?>
 
-            <div class="col-xl col-lg-3 col-md-4 col-sm-6 text-center justify-content-center">
+            <div class="col-xl col-lg-3 col-md-4 col-sm-6 text-center justify-content-center ">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('medium', array('class' => 'rounded img-fluid my-3 justify-content-center') ); ?>
+                    <?php the_post_thumbnail('medium', array('class' => 'rounded img-fluid my-3 ') ); ?>
                 </a>
 
             </div>
