@@ -111,7 +111,7 @@ register_sidebar(
 
 include_once get_template_directory() .  "/cpt/downloads.php";
 // include_once get_template_directory() .  "/cpt/eventos.php";
-include_once get_template_directory() .  "/cpt/depoimentos.php";
+//include_once get_template_directory() .  "/cpt/depoimentos.php";
 include_once get_template_directory() .  "/includes/cmb2/load.php";
 
 function search_filter($query) {
