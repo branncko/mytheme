@@ -33,8 +33,8 @@ set_post_thumbnail_size( 1000, 1000, false);
 
 if (!function_exists('mytheme_image_sizes')) {
 	function mytheme_image_sizes() {
-		add_image_size('large_1080', 1080, 9999);
-		add_image_size('medium-400', 400, 9999);
+		add_image_size('large_1080', 1080, 1080, false);
+		add_image_size('medium-400', 400, 400, false);
 		// add_image_size('mytheme-large', 678, 509, true);
 		// add_image_size('mytheme-medium', 326, 245, true);
 		// add_image_size('mytheme-small', 800, 600, true);
