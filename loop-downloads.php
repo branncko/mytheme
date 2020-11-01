@@ -7,7 +7,7 @@
                                       class="rounded card justify-content-center col-xl col-lg-2 col-md-4 col-sm-6  mb-1">
 
                                       <a href="<?php the_permalink(); ?>">
-                                          <?php the_post_thumbnail('medium', array('class' => 'img-fluid  p-2 ') ); ?>
+                                          <?php the_post_thumbnail('medium-400', array('class' => 'img-fluid  p-2 ') ); ?>
                                       </a>
                                   </div>
 
