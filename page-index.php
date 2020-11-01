@@ -33,7 +33,7 @@
 
             <div class="col-xl col-lg-3 col-md-4 col-sm-6 text-center justify-content-center ">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('medium', array('class' => 'rounded img-fluid my-3 ') ); ?>
+                    <?php the_post_thumbnail('medium-400', array('class' => 'rounded img-fluid my-3 ') ); ?>
                 </a>
 
             </div>
@@ -99,7 +99,7 @@
 
             <div class="col-lg-3 col-sm-6 ">
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('medium', array('class' => 'img-thumbnail my-3 justify-content-center') ); ?>
+                    <?php the_post_thumbnail('medium-400', array('class' => 'img-thumbnail my-3 justify-content-center') ); ?>
                 </a>
 
             </div>
