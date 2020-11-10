@@ -40,7 +40,7 @@
                 </div>
 
                 <div
-                    class="search search-filter col pd-none-i mg-left-lv2-i card px-5 py-3 m-1 justify-content-center badge-primary">
+                    class="search search-filter col pd-none-i mg-left-lv2-i card px-2 py-3 mx-3 justify-content-center badge-secondary">
                     <div class="col-lg col-md col-lg-12">
                         <?php get_search_form(); ?>
                     </div>
@@ -56,9 +56,9 @@
         </div>
 
     </div>
-    <div class="justify-content-right bg-mt-gray">
+    <div class="justify-content-right bg-mt-gray ">
 
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-right">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-right ">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Expandir Menu">
