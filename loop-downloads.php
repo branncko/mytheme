@@ -4,7 +4,7 @@
 
                                   <?php while ( have_posts() ) : the_post();?>
                                   <div
-                                      class="rounded card justify-content-center col-xl col-lg-2 col-md-4 col-sm-6  mb-1">
+                                      class="col-xl col-lg-2 col-md-4 col-sm-6  mb-1 rounded card text-center justify-content-center">
 
                                       <a href="<?php the_permalink(); ?>">
                                           <?php the_post_thumbnail('medium-400', array('class' => 'img-fluid  p-2 ') ); ?>
