@@ -21,6 +21,11 @@ get_header(); ?>
             <ul>
                 <?php wp_list_categories(); ?>
             </ul>
+            
+            <ul>
+                <?php single_cat_title(); ?>
+            </ul>
+            
 
         </div>
         <?php get_sidebar(); ?>
