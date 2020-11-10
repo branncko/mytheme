@@ -3,7 +3,8 @@
     <div class="row p-4 mt-1">
         <div class="col card alert-secondary mb-3">
 
-            <h2 class="pl-5 my-2"> <i class="fa fa-folder-open"></i> <?php single_cat_title(); ?> </h2>
+            <h2 class="my-2" style="padding: 10px 0 10px; font-size: 2.2rem;
+font-weight: 300; "> <i class="fa fa-folder-open"></i> <?php single_cat_title(); ?> </h2>
 
             <?php get_template_part('loop', 'downloads'); ?>
 
