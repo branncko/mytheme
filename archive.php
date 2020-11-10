@@ -4,7 +4,7 @@ Template Name: Archives
 */
 get_header(); ?>
 
-<div id="container-fluid">
+<div id="container">
     <div class="row p-4 mt-1">
         <div class="col card alert-secondary mb-3">
 
