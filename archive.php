@@ -9,15 +9,15 @@ get_header(); ?>
         <div class="col card alert-secondary mb-3">
 
             <?php the_post(); ?>
-            <h1 class="entry-title"><?php the_title(); ?></h1>
+            <h1 class="entry-title my-3">Publicações</h1>
 
             
-            <h2>Publicações por Mês:</h2>
+            <h2>Por Mês:</h2>
             <ul>
                 <?php wp_get_archives('type=monthly'); ?>
             </ul>
 
-            <h2>Publicações por Assunto:</h2>
+            <h2>Por Assunto:</h2>
             <ul>
                 <?php wp_list_categories(); ?>
             </ul>
