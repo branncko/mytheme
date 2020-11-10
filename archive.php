@@ -12,7 +12,7 @@ get_header(); ?>
             <h1 class="entry-title"><?php the_title(); ?></h1>
 
             
-            <h2><?php _e('Archives by Month:'); ?></h2>
+            <h2><?php _e('Publicações por Mês:'); ?></h2>
             <ul>
                 <?php wp_get_archives('type=monthly'); ?>
             </ul>
