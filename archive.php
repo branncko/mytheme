@@ -12,20 +12,21 @@ get_header(); ?>
             <h1 class="entry-title"><?php the_title(); ?></h1>
 
             
-            <h2><?php _e('Publicações por Mês:'); ?></h2>
+            <h2>Publicações por Mês:</h2>
             <ul>
                 <?php wp_get_archives('type=monthly'); ?>
             </ul>
 
-            <h2>Archives by Subject:</h2>
+            <h2>Publicações por Assunto:</h2>
             <ul>
                 <?php wp_list_categories(); ?>
             </ul>
 
         </div>
+        <?php get_sidebar(); ?>
 
     </div><!-- #content -->
 </div><!-- #container -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
