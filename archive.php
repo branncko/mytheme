@@ -11,9 +11,8 @@ get_header(); ?>
             <?php the_post(); ?>
             <h1 class="entry-title"><?php the_title(); ?></h1>
 
-            <?php get_search_form(); ?>
-
-            <h2>Archives by Month:</h2>
+            
+            <h2><?php __('Archives by Month:'); ?></h2>
             <ul>
                 <?php wp_get_archives('type=monthly'); ?>
             </ul>
