@@ -5,7 +5,7 @@
 
     <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
 
-    <div class="row alert alert-heading">
+    <div class="row bg-mt-abacate">
 
         <div class="col-md-8 p-3">
             <h1 class="mt-5 mb-4">
