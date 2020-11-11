@@ -25,11 +25,11 @@
                 <?php previous_posts_link('Mais novos'); ?>
             </div>
 
-            <?php get_sidebar();?>
+
 
         </div>
 
-
+        <?php get_sidebar();?>
 
 
     </div>
