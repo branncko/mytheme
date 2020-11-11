@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row p-4 mt-1">
-        <div class="col card alert-secondary mb-3">
+        <div class="col card alert-secondary mb-3 px-3">
 
             <?php if( have_posts() ) : while ( have_posts()) : the_post(); ?>
 
