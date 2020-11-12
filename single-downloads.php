@@ -8,7 +8,7 @@
 
             <h1 class="mt-3 mb-4"><?php the_title(); ?></h1>
 
-            <?php the_post_thumbnail('medium-400', array('class' => 'rounded card alert-secondary center img-fluid p-3 mb-3') ); ?>
+            <?php the_post_thumbnail('large-1080', array('class' => 'rounded card alert-secondary center img-fluid p-3 mb-3') ); ?>
 
             <!-- <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa"
                 class="rounded img-fluid mb-3 p-2 card alert-primary"> -->
