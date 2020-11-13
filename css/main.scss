@@ -3,15 +3,12 @@ $mt-gray: #767879;
 $mt-orange-dark: #c9530f;
 $mt-orange: #fc9801fd;
 $mt-orange-light: #ec9f47;
-$mt-abacate:  #0bf13d;
+
 
 $theme-colors: ( 
-    "mt-dark": $mt-dark, 
-    "mt-gray": $mt-gray,
-    "mt-orange": $mt-orange,
-    "mt-orange-light": $mt-orange-light,
-    "mt-orange-dark" : $mt-orange-dark,
-    "mt-abacate": $mt-abacate
+      "gray-dark": #000000
+
+    
 );
 
 $link-color: $mt-orange-dark;
@@ -36,14 +33,8 @@ $link-hover-color: darken ($link-color, 15%);
    height: 500px;
    object-fit: cover;
 }
-.header-ad {
-  
-   //width: 1000px;
-   max-width: 100%;
+.teste {
+   background-color: #be5716;
 }
 
-.footer-ad {
-   //width: 780px;
-   max-width: 100%;
-}
 @import"../node_modules/bootstrap/scss/bootstrap"; 
