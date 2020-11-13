@@ -58,7 +58,7 @@ add_filter('next_posts_link_attributes', 'posts_link_attibutes');
 add_filter('previous_posts_link_attributes', 'posts_link_attibutes');
 
 function posts_link_attibutes() {
-    return 'class="btn btn-mt-orange"';
+    return 'class="btn btn-mt-orange-light"';
 }
 
 // Widgets e Sidebar
