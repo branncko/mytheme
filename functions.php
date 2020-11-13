@@ -28,7 +28,7 @@ register_nav_menus(array(
 ));
 // Miniaturas
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 1800, 1350, false); 
+set_post_thumbnail_size( 1080, 1350, false); 
 
 
 if (!function_exists('mytheme_image_sizes')) {
