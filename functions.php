@@ -113,7 +113,7 @@ include_once get_template_directory() .  "/cpt/downloads.php";
 // include_once get_template_directory() .  "/cpt/eventos.php";
 //include_once get_template_directory() .  "/cpt/depoimentos.php";
 include_once get_template_directory() .  "/includes/cmb2/load.php";
-//require_once get_template_directory() .  "/cpt/endpoint.php";
+require_once get_template_directory() .  "/cpt/testa_funcao.php";
 
 function search_filter($query) {
     if ( !is_admin() && $query->is_main_query() ) {
