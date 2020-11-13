@@ -20,7 +20,7 @@
 
             $down_args = array(
             'post_type' => 'downloads', 
-            'posts_per_page' => 8,
+            'posts_per_page' => 6,
             
 
 
@@ -87,7 +87,7 @@
                     $down_args = array(
                     'post_type' => 'downloads', 
                     'posts_per_page' => 8,
-                    'offset' => 9
+                    'offset' => 7
 
 
                     );
