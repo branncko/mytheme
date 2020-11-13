@@ -12,7 +12,7 @@ function listar_posts_pmc() {
             echo '<ul>';
             foreach ( $data as $rest_post) {
                 echo '<li>';
-                    echo '<a href="' . esc_url( $rest_post->link ) . '">'; echo 'teste </a>';
+                    echo '<a href="' . esc_url( $rest_post->link ) . '">'; echo $rest_post->title 'teste </a>';
                 echo '</li>';
             }
 
