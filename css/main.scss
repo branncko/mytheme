@@ -1,12 +1,17 @@
 $mt-dark: #2a3342;
 $mt-gray: #767879;
 $mt-orange-dark: #c9530f;
-$mt-orange: #fc9801fd;
-$mt-orange-light: #ec9f47;
+$mt-orange: #2a3342;
+$mt-orange-light: #f38a12;
 
 
 $theme-colors: ( 
-      "gray-dark": #000000
+      "gray-dark": #000000,
+      "mt-dark": $mt-dark, 
+      "mt-gray": $mt-gray,
+     // "mt-orange": $mt-orange,
+      "mt-orange-light": $mt-orange-light,
+      "mt-orange-dark" : $mt-orange-dark
 
     
 );
@@ -34,7 +39,7 @@ $link-hover-color: darken ($link-color, 15%);
    object-fit: cover;
 }
 .teste {
-   background-color: #be5716;
+   background-color: #b86a3a;
 }
 
 @import"../node_modules/bootstrap/scss/bootstrap"; 
