@@ -100,8 +100,8 @@ register_sidebar(
     array(
         'name'          => 'Cards',
         'id'            => 'cards',
-        'before_widget' => '',
-        'after_widget'  => '',
+        'before_widget' => '<div class="card border-0 mb-4"><div class="card-body">',
+        'after_widget'  => '</div></div>',
         'before_title'  => '',
         'after_title'   => '',
 
