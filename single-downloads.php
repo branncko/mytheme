@@ -63,7 +63,7 @@
 
         </div>
         <?php get_sidebar();?>
-        <?php listar_posts_pmc();?>
+        <!-- <?php listar_posts_pmc();?> -->
     
        
 
