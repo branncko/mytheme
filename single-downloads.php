@@ -12,26 +12,31 @@
 
             <!-- <img src="<?php the_field('cmb2_down_imagem');?>" alt="imagem demonstrativa"
                 class="rounded img-fluid mb-3 p-2 card alert-primary"> -->
-            
-           
+
+
             <!-- <img src="<?php wp_get_attachment_image ( the_field('cmb2_down_imagem'), 'mytheme-content' ); ?>" alt="Aqui" class="rounded mb-3 p-2 card alert-primary"> -->
-           
+
+        </div>
 
 
-             
+
+
+        <div class="col-lg-4 col-12">
+            <h4 class="mt-3 pl-1 ">Publicidade</h4>
+            <?php  dynamic_sidebar( 'Cards' );  ?>
             <div class="well hidden-xs">
 
-            
-            
+
+
                 <h4 class="pl-1 ">Detalhes</h4>
-                
+
                 <span class="p-2 card"> <?php the_excerpt();?></span>
 
                 <!-- <?php the_category('  |  '); ?> -->
 
                 <i class="fa fa-folder-open"></i> <?php  the_terms($post->ID , 'downloads_tipo', '', ' | ' ); ?> <br>
                 <!-- <i class="fa fa-comments" aria-hidden="true"></i>
-                <?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
+<?php comments_number( 'Nenhum comentário', '01 comentário', '% comentários' ); ?><br> -->
                 <i class="fa fa-eye" aria-hidden="true"></i>
                 <i class="fa fa-clock-o"></i> Publicado em
                 <?php the_date('d/m/Y \|\ H:i:s'); ?> <br>
@@ -40,14 +45,15 @@
             </div>
 
             <p>
-            
-            <a class="btn btn-outline-primary btn-lg mb-3 mt-3" href="<?php the_field('cmb2_down_link'); ?>" target="_blank" >Baixar</a>
+
+                <a class="btn btn-outline-primary btn-lg mb-3 mt-3" href="<?php the_field('cmb2_down_link'); ?>"
+                    target="_blank">Baixar</a>
             </p>
 
-            <div class="mt-3 mb-4">
-                <?php next_posts_link('Mais antigos'); ?>
-                <?php previous_posts_link('Mais novos'); ?>
-            </div>
+
+
+
+
 
             <!-- cmb2_down_imagem -->
 
@@ -58,14 +64,7 @@
 
 
 
-
-
-
         </div>
-        <?php get_sidebar();?>
-        
-    
-       
 
     </div>
 </div>
