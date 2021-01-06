@@ -46,13 +46,22 @@
 
             <p>
 
-                <a class="btn btn-outline-primary btn-lg mb-3 mt-3" href="<?php the_field('cmb2_down_link'); ?>"
+            <?php 
+            
+            $download = get_field('cmb2_down_link');
+            ?>
+
+                <a class="btn btn-outline-primary btn-lg mb-3 mt-3" href="<?php 
+                if (empty($download)){
+                    the_field('cmb2_down_imagem');
+                }
+                
+                if (isset($download)) {
+                
+                
+                the_field('cmb2_down_link');} ?>"
                     target="_blank">Baixar</a>
             </p>
-
-
-
-
 
 
             <!-- cmb2_down_imagem -->
