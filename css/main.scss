@@ -42,4 +42,8 @@ $link-hover-color: darken ($link-color, 15%);
    background-color: #b86a3a;
 }
 
+.bg-imgfree {
+   background: url("png-pattern.png") #767676 repeat;
+}
+
 @import"../node_modules/bootstrap/scss/bootstrap"; 
