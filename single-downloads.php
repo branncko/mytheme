@@ -8,7 +8,6 @@
                 <?php  dynamic_sidebar( 'Ads Topo' );  ?>
             </div>
 
-
         </div>
     </div>
     <div class="row my-3 pt-2">
@@ -27,7 +26,8 @@
 
             <!-- <img src="<?php wp_get_attachment_image ( the_field('cmb2_down_imagem'), 'mytheme-content' ); ?>" alt="Aqui" class="rounded mb-3 p-2 card alert-primary"> -->
 
-           Essa imagem foi publicada por <?php  the_author(); ?> em <?php the_date('d/m/Y \a\s\ H:i:s'); ?> e faz parte dos grupos: <?php  the_terms($post->ID , 'downloads_tipo', '', ' | ' ); ?>
+            Essa imagem foi publicada por <?php  the_author(); ?> em <?php the_date('d/m/Y \a\s\ H:i:s'); ?> e faz parte
+            dos grupos: <?php  the_terms($post->ID , 'downloads_tipo', '', ' | ' ); ?>
 
         </div>
 
