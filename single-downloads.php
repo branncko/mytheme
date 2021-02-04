@@ -26,7 +26,7 @@
 
             <!-- <img src="<?php wp_get_attachment_image ( the_field('cmb2_down_imagem'), 'mytheme-content' ); ?>" alt="Aqui" class="rounded mb-3 p-2 card alert-primary"> -->
 
-            Essa imagem foi publicada por <?php  the_author(); ?> em <?php the_date('d/m/Y \a\s\ H:i:s'); ?> e faz parte
+            Essa imagem foi publicada por <?php  the_author(); ?> e faz parte
             dos grupos: <?php  the_terms($post->ID , 'downloads_tipo', '', ' | ' ); ?>
 
         </div>
@@ -63,13 +63,12 @@ $download = get_field('cmb2_down_link');
                 <i class="fa fa-folder-open"></i> <?php  the_terms($post->ID , 'downloads_tipo', '', ' | ' ); ?> <br>
 
                 <i class="fa fa-eye" aria-hidden="true"></i>
-                <i class="fa fa-clock-o"></i> Publicado em
-                <?php the_date('d/m/Y \|\ H:i:s'); ?> <br>
+                <i class="fa fa-clock-o"></i> Publicado em <?php the_date('d/m/Y \|\ H:i:s'); ?> <br>
                 <i class="fas fa-edit" aria-hidden="true"></i> Alterado em
                 <?php the_modified_date('d/m/Y \|\ H:i:s'); ?><br>
             </div>
             <!-- <h4 class="mt-5">Publicidade</h4> -->
-            <?php  dynamic_sidebar( 'Cards' );  ?>
+            <?php  dynamic_sidebar('Cards');  ?>
 
 
 
