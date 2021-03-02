@@ -64,9 +64,13 @@
     <div class="container-fluid mt-3 clearfix">
         <div class="row bg-mt-orange-light">
 
-            <div class="col header-ad center p-2">
-                <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="col header-ad center p-2">
+                    <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+                </div>
             </div>
+
 
 
         </div>
