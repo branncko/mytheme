@@ -1,5 +1,11 @@
                           <div class="container-fluid">
+
+
                               <div class="row">
+
+                                  <div class="col header-ad center p-2">
+                                      <?php  dynamic_sidebar( 'Ads Topo' );  ?>
+                                  </div>
 
 
                                   <?php while ( have_posts() ) : the_post();?>
